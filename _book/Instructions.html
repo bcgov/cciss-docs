@@ -1,0 +1,1053 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.4.551">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Climate Change Informed Species Selection (CCISS) Tool - 3&nbsp; Instructions (How to CCISS)</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./Methods.html" rel="next">
+<link href="./Overview.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body class="nav-sidebar floating">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./Instructions.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Instructions (How to CCISS)</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">Climate Change Informed Species Selection (CCISS) Tool</a> 
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Climate Change Informed Species Selection (CCISS) Tool</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Overview.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Overview</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Instructions.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Instructions (How to CCISS)</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Methods.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Methods (How the Tool Works)</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Issues.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Known Issues</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Decisions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Decision Guidance</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Feedback.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Providing Feedback</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./FAQs.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Frequently Asked Questions</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Resources.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Resources</span></span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#select-sites" id="toc-select-sites" class="nav-link active" data-scroll-target="#select-sites"><span class="header-section-number">3.1</span> SELECT SITES:</a>
+  <ul class="collapse">
+  <li><a href="#step-1.-select-points-or-areas-of-interest" id="toc-step-1.-select-points-or-areas-of-interest" class="nav-link" data-scroll-target="#step-1.-select-points-or-areas-of-interest"><span class="header-section-number">3.1.1</span> <strong>Step 1.</strong> Select points or areas of interest:</a></li>
+  <li><a href="#step-2.-optional-select-report-by-individual-point-or-bgc-unit-average." id="toc-step-2.-optional-select-report-by-individual-point-or-bgc-unit-average." class="nav-link" data-scroll-target="#step-2.-optional-select-report-by-individual-point-or-bgc-unit-average."><span class="header-section-number">3.1.2</span> <strong>Step 2. (Optional)</strong> Select report by individual point or BGC unit average.</a></li>
+  <li><a href="#step-3.-optional-adjust-session-parameters" id="toc-step-3.-optional-adjust-session-parameters" class="nav-link" data-scroll-target="#step-3.-optional-adjust-session-parameters"><span class="header-section-number">3.1.3</span> <strong>Step 3. (Optional)</strong> Adjust session parameters</a></li>
+  <li><a href="#step-4.-generate-results" id="toc-step-4.-generate-results" class="nav-link" data-scroll-target="#step-4.-generate-results"><span class="header-section-number">3.1.4</span> <strong>Step 4</strong>. Generate results</a></li>
+  </ul></li>
+  <li><a href="#more-information-on-adjusting-session-parameters" id="toc-more-information-on-adjusting-session-parameters" class="nav-link" data-scroll-target="#more-information-on-adjusting-session-parameters"><span class="header-section-number">3.2</span> <u>More information on adjusting session parameters:</u></a>
+  <ul class="collapse">
+  <li><a href="#climatic-novelty" id="toc-climatic-novelty" class="nav-link" data-scroll-target="#climatic-novelty"><span class="header-section-number">3.2.1</span> 1. Climatic novelty</a></li>
+  <li><a href="#outside-of-home-range-ohr-suitabilities" id="toc-outside-of-home-range-ohr-suitabilities" class="nav-link" data-scroll-target="#outside-of-home-range-ohr-suitabilities"><span class="header-section-number">3.2.2</span> 2. Outside of Home Range (OHR) suitabilities</a></li>
+  <li><a href="#establishment-suitability-weights" id="toc-establishment-suitability-weights" class="nav-link" data-scroll-target="#establishment-suitability-weights"><span class="header-section-number">3.2.3</span> 3. Establishment suitability weights</a></li>
+  <li><a href="#maturation-suitability-weights" id="toc-maturation-suitability-weights" class="nav-link" data-scroll-target="#maturation-suitability-weights"><span class="header-section-number">3.2.4</span> 4. Maturation suitability weights</a></li>
+  <li><a href="#global-climate-model-gcm-weights" id="toc-global-climate-model-gcm-weights" class="nav-link" data-scroll-target="#global-climate-model-gcm-weights"><span class="header-section-number">3.2.5</span> 5. Global Climate Model (GCM) weights</a></li>
+  <li><a href="#scenario-weights" id="toc-scenario-weights" class="nav-link" data-scroll-target="#scenario-weights"><span class="header-section-number">3.2.6</span> 6. Scenario weights</a></li>
+  <li><a href="#example-ichdw1" id="toc-example-ichdw1" class="nav-link" data-scroll-target="#example-ichdw1"><span class="header-section-number">3.2.7</span> Example: ICHdw1</a></li>
+  </ul></li>
+  <li><a href="#suitability-report" id="toc-suitability-report" class="nav-link" data-scroll-target="#suitability-report"><span class="header-section-number">3.3</span> SUITABILITY REPORT</a>
+  <ul class="collapse">
+  <li><a href="#selectionfilter-pane" id="toc-selectionfilter-pane" class="nav-link" data-scroll-target="#selectionfilter-pane"><span class="header-section-number">3.3.1</span> Selection/Filter pane</a></li>
+  <li><a href="#detailed-report" id="toc-detailed-report" class="nav-link" data-scroll-target="#detailed-report"><span class="header-section-number">3.3.2</span> Detailed report</a></li>
+  <li><a href="#summary-report" id="toc-summary-report" class="nav-link" data-scroll-target="#summary-report"><span class="header-section-number">3.3.3</span> Summary report</a></li>
+  <li><a href="#example-ichdw1-cont." id="toc-example-ichdw1-cont." class="nav-link" data-scroll-target="#example-ichdw1-cont."><span class="header-section-number">3.3.4</span> Example: ICHdw1 cont.</a></li>
+  </ul></li>
+  <li><a href="#bec-futures" id="toc-bec-futures" class="nav-link" data-scroll-target="#bec-futures"><span class="header-section-number">3.4</span> BEC FUTURES:</a>
+  <ul class="collapse">
+  <li><a href="#chart" id="toc-chart" class="nav-link" data-scroll-target="#chart"><span class="header-section-number">3.4.1</span> Chart</a></li>
+  <li><a href="#map" id="toc-map" class="nav-link" data-scroll-target="#map"><span class="header-section-number">3.4.2</span> Map</a></li>
+  <li><a href="#example-ichdw1-cont.-1" id="toc-example-ichdw1-cont.-1" class="nav-link" data-scroll-target="#example-ichdw1-cont.-1"><span class="header-section-number">3.4.3</span> Example: ICHdw1 cont.</a></li>
+  </ul></li>
+  <li><a href="#silvics" id="toc-silvics" class="nav-link" data-scroll-target="#silvics"><span class="header-section-number">3.5</span> SILVICS</a>
+  <ul class="collapse">
+  <li><a href="#example-ichdw1-cont.-2" id="toc-example-ichdw1-cont.-2" class="nav-link" data-scroll-target="#example-ichdw1-cont.-2"><span class="header-section-number">3.5.1</span> Example: ICHdw1 cont.</a></li>
+  </ul></li>
+  <li><a href="#export" id="toc-export" class="nav-link" data-scroll-target="#export"><span class="header-section-number">3.6</span> EXPORT</a>
+  <ul class="collapse">
+  <li><a href="#export-report" id="toc-export-report" class="nav-link" data-scroll-target="#export-report"><span class="header-section-number">3.6.1</span> Export Report</a></li>
+  <li><a href="#export-data" id="toc-export-data" class="nav-link" data-scroll-target="#export-data"><span class="header-section-number">3.6.2</span> Export data</a></li>
+  <li><a href="#example-ichdw1-cont.-3" id="toc-example-ichdw1-cont.-3" class="nav-link" data-scroll-target="#example-ichdw1-cont.-3"><span class="header-section-number">3.6.3</span> Example: ICHdw1 cont.</a></li>
+  </ul></li>
+  <li><a href="#cciss-spatial" id="toc-cciss-spatial" class="nav-link" data-scroll-target="#cciss-spatial"><span class="header-section-number">3.7</span> CCISS SPATIAL</a>
+  <ul class="collapse">
+  <li><a href="#subregion-type" id="toc-subregion-type" class="nav-link" data-scroll-target="#subregion-type"><span class="header-section-number">3.7.1</span> Subregion type</a></li>
+  <li><a href="#display-bgc-or-suitability" id="toc-display-bgc-or-suitability" class="nav-link" data-scroll-target="#display-bgc-or-suitability"><span class="header-section-number">3.7.2</span> Display BGC or Suitability</a></li>
+  <li><a href="#bgc-mode" id="toc-bgc-mode" class="nav-link" data-scroll-target="#bgc-mode"><span class="header-section-number">3.7.3</span> BGC mode</a></li>
+  <li><a href="#suitability-mode" id="toc-suitability-mode" class="nav-link" data-scroll-target="#suitability-mode"><span class="header-section-number">3.7.4</span> Suitability mode</a></li>
+  <li><a href="#display-novelty" id="toc-display-novelty" class="nav-link" data-scroll-target="#display-novelty"><span class="header-section-number">3.7.5</span> Display Novelty</a></li>
+  <li><a href="#hideshow-layer" id="toc-hideshow-layer" class="nav-link" data-scroll-target="#hideshow-layer"><span class="header-section-number">3.7.6</span> Hide/Show Layer</a></li>
+  <li><a href="#find-a-bec" id="toc-find-a-bec" class="nav-link" data-scroll-target="#find-a-bec"><span class="header-section-number">3.7.7</span> Find-A-BEC</a></li>
+  <li><a href="#export-data-from-cciss-spatial" id="toc-export-data-from-cciss-spatial" class="nav-link" data-scroll-target="#export-data-from-cciss-spatial"><span class="header-section-number">3.7.8</span> Export data from <strong>CCISS Spatial</strong>:</a></li>
+  <li><a href="#example-ichdw1-cont.-4" id="toc-example-ichdw1-cont.-4" class="nav-link" data-scroll-target="#example-ichdw1-cont.-4"><span class="header-section-number">3.7.9</span> Example: ICHdw1 cont.</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Instructions (How to CCISS)</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="select-sites" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="select-sites"><span class="header-section-number">3.1</span> SELECT SITES:</h2>
+<p>In the first tab of the CCISS tool, users can select points or areas of interest, and make manual adjustments to model parameters if necessary. For a very quick summary of functionality of this page, users can also click the <em>What does this page do</em> link at the top of the left-hand panel.</p>
+<section id="step-1.-select-points-or-areas-of-interest" class="level3" data-number="3.1.1">
+<h3 data-number="3.1.1" class="anchored" data-anchor-id="step-1.-select-points-or-areas-of-interest"><span class="header-section-number">3.1.1</span> <strong>Step 1.</strong> Select points or areas of interest:</h3>
+<p>Users can select points or areas of interest using <strong>one of the following three methods</strong>:</p>
+<ul>
+<li><p><strong>Option 1</strong>. Click on the biogeoclimatic (BGC) map to add one or more individual locations. Use this option if you have specific sites you are interested in or are exploring CCISS results. Where multiple sites are selected, the user can choose to generate a report where points are averaged within a BGC unit (default) or for each individual site.</p></li>
+<li><p><strong>Option 2</strong>. Click on the map to choose an entire BGC unit or a BGC unit within a single Forest District. The CCISS tool will use a set of pre-selected random points for the units chosen. This option is to be used where general trends are desired by area. The BGC + District option is probably most appropriate for stocking standard revisions. To find a specific BGC unit, users can use the <strong>Find-a-BEC</strong> drop-down menu at the bottom of the left-hand panel. This will highlight the selected unit in yellow, with a red border.</p></li>
+<li><p><strong>Option 3</strong>. Select a formatted CSV file to upload user-specified and named points. The batch file must be in comma-separated (.csv) text format specifying a short sitename, latitude, longitude, and (optionally) site series (formatted like ICHmc2/01a with no spaces) for each site. Batch files of up to 4000 points are supported and run at about 20 points/second.</p></li>
+</ul>
+</section>
+<section id="step-2.-optional-select-report-by-individual-point-or-bgc-unit-average." class="level3" data-number="3.1.2">
+<h3 data-number="3.1.2" class="anchored" data-anchor-id="step-2.-optional-select-report-by-individual-point-or-bgc-unit-average."><span class="header-section-number">3.1.2</span> <strong>Step 2. (Optional)</strong> Select report by individual point or BGC unit average.</h3>
+<p>Users have the option of selecting to view the CCISS report either by individual points, or to average across all points in the same BGC unit. Step 1’s <em>Option 1</em> and <em>Option 3</em> default to individual reports for each point, while <em>Option 2</em> defaults to a BGC unit averaged report. To change this, users can toggle the slider underneath the big blue <strong>Generate results</strong> button from <em>Report by individual sites</em> to <em>Report averaged by BGC</em>.</p>
+</section>
+<section id="step-3.-optional-adjust-session-parameters" class="level3" data-number="3.1.3">
+<h3 data-number="3.1.3" class="anchored" data-anchor-id="step-3.-optional-adjust-session-parameters"><span class="header-section-number">3.1.3</span> <strong>Step 3. (Optional)</strong> Adjust session parameters</h3>
+<p>Users can adjust session parameters by clicking on the grey <strong>Model parameters</strong> button underneath the red <strong>Clear selections</strong> button. A dialog box appears, with options that allow users to view and adjust the default settings of the CCISS tool. Users are encouraged to read the relevant sections of the CCISS tool documentation prior to changing the default settings. A brief description is also given below.</p>
+</section>
+<section id="step-4.-generate-results" class="level3" data-number="3.1.4">
+<h3 data-number="3.1.4" class="anchored" data-anchor-id="step-4.-generate-results"><span class="header-section-number">3.1.4</span> <strong>Step 4</strong>. Generate results</h3>
+<p>Click the big blue <strong>Generate results</strong> button on the left side of the screen to complete the analysis for the points of interest. If additional points are added or changes are made to parameters, the <strong>Generate results</strong> button will change to <strong>Refresh results</strong> to regenerate the output. <br><br></p>
+</section>
+</section>
+<section id="more-information-on-adjusting-session-parameters" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="more-information-on-adjusting-session-parameters"><span class="header-section-number">3.2</span> <u>More information on adjusting session parameters:</u></h2>
+<figure style="text-align:center;" class="figure">
+<p><img src="Figure_Instructions_ModelParameters.png" style="width:40%;" class="figure-img"></p>
+<figcaption style="font-size: 0.8em; color: gray;">
+<p>Figure 1: Example of the dialog box for adjusting <strong>Model parameters</strong>. Steps 1-6 correspond with the documentation below the figure.</p>
+</figcaption>
+</figure>
+<section id="climatic-novelty" class="level3" data-number="3.2.1">
+<h3 data-number="3.2.1" class="anchored" data-anchor-id="climatic-novelty"><span class="header-section-number">3.2.1</span> 1. Climatic novelty</h3>
+<p>Climatic novelty refers to the degree of mismatch between a future climate condition and the biogeoclimatic analog it is classified as. Valid inferences of species suitability are not possible in highly novel climates. By default, biogeoclimatic projections with high (5<span class="math inline">\(\sigma\)</span>) novelty are removed from CCISS results and replaced with a black bar in the detailed suitability results. Using the <strong>Model parameters</strong> dialog box, users can disable the removal of novel climates and adjust the 5<span class="math inline">\(\sigma\)</span> threshold. For more information, see Documentation - Methods - Novel Climates.</p>
+</section>
+<section id="outside-of-home-range-ohr-suitabilities" class="level3" data-number="3.2.2">
+<h3 data-number="3.2.2" class="anchored" data-anchor-id="outside-of-home-range-ohr-suitabilities"><span class="header-section-number">3.2.2</span> 2. Outside of Home Range (OHR) suitabilities</h3>
+<p>CCISS includes environmental suitability ratings for Douglas-fir and western larch in biogeoclimatic subzone-variants where there is strong evidence that they were suitable for the baseline 1961-1990 climate despite not occurring there naturally due to migration lag. Using the <strong>Model parameters</strong> dialog box, users can disable the inclusion of OHR suitabilities. See Documentation - Methods - OHR.</p>
+</section>
+<section id="establishment-suitability-weights" class="level3" data-number="3.2.3">
+<h3 data-number="3.2.3" class="anchored" data-anchor-id="establishment-suitability-weights"><span class="header-section-number">3.2.3</span> 3. Establishment suitability weights</h3>
+<p>The suitability report provides an assessment of <strong>establishment suitability</strong>, representing the likelihood of success in establishing the species to free growing if planted in the present climate. The default setting almost equally weights the environmental suitability (expert derived) in the baseline 1961-1990 climate, and the model predicted environmental suitability from the observed 2001-2020 climate, and the projected 2021-2040 climate, with a slight weighting towards the two most recent time periods. Using the <strong>Model parameters</strong> dialog box, users can manually adjust these default weightings to suit their needs. See Documentation - Methods - Rule Sets.</p>
+</section>
+<section id="maturation-suitability-weights" class="level3" data-number="3.2.4">
+<h3 data-number="3.2.4" class="anchored" data-anchor-id="maturation-suitability-weights"><span class="header-section-number">3.2.4</span> 4. Maturation suitability weights</h3>
+<p>The suitability report provides an assessment of <strong>maturation suitability</strong>: the suitability of the species through the entire future period to rotation (2021 to 2100). The default setting equally weights the four 20-year future time periods. Using the <strong>Model parameters</strong> dialog box, users can manually adjust these default weightings. See Documentation - Methods - Rule Sets.</p>
+</section>
+<section id="global-climate-model-gcm-weights" class="level3" data-number="3.2.5">
+<h3 data-number="3.2.5" class="anchored" data-anchor-id="global-climate-model-gcm-weights"><span class="header-section-number">3.2.5</span> 5. Global Climate Model (GCM) weights</h3>
+<p>There are 13 GCMs available in the CCISS tool. However, the CCISS tool defaults to the 8-model ensemble of GCMs recommended by <a href="https://doi.org/10.1002/joc.7566" target="_blank">Mahony et al.&nbsp;(2022) </a> and assigns each of these models equal weighting. The other five models were excluded because their warming rates are not supported by observational evidence (CanESM5, UKESM1, INM-CM5; explained <a href="https://www2.gov.bc.ca/assets/gov/environment/natural-resource-stewardship/nrs-climate-change/climatena_8modelrationale.pdf" target="_blank">here</a>, because they only have a single run for each scenario (BCC-CSM2, INM-CM5), or because they exhibit unrealistic localized warming in BC (IPSL-CM6A). Using the <strong>Model parameters</strong> dialog box, users can adjust which GCMs are used and their respective weightings. See Documentation - Methods - Climate Change Projections.</p>
+</section>
+<section id="scenario-weights" class="level3" data-number="3.2.6">
+<h3 data-number="3.2.6" class="anchored" data-anchor-id="scenario-weights"><span class="header-section-number">3.2.6</span> 6. Scenario weights</h3>
+<p>Global climate model projections follow scenarios of future greenhouse gas emissions called <a href="https://www.carbonbrief.org/explainer-how-shared-socioeconomic-pathways-explore-future-climate-change" target="_blank">Shared Socioeconomic Pathways</a> (SSPs). The CCISS tool provides the option of giving different weights to the four major SSP scenarios: SSP1-2.6, SSP2-4.5, SSP3-7.0, and SSP5-8.5. Collectively, SSP1-2.6, SSP2-4.5, and SSP3-7.0 provide a reasonable representation of optimistic, neutral, and pessimistic outlooks on global emissions policies and socioeconomic development. The CCISS tool defaults to equal weighting of these three scenarios to represent scenario uncertainty in climate change projections. We have set SSP5-8.5 weighting to 0 in the default scenarios because it is extremely unlikely based on current trends in energy economics and policy (<a href="https://www.nature.com/articles/d41586-020-00177-3" target="_blank">Hausfather and Peters 2020</a>). Users can adjust these weightings using the <strong>Model parameters</strong> dialog box. See Documentation - Methods - Climate Change Projections.</p>
+</section>
+<section id="example-ichdw1" class="level3" data-number="3.2.7">
+<h3 data-number="3.2.7" class="anchored" data-anchor-id="example-ichdw1"><span class="header-section-number">3.2.7</span> Example: ICHdw1</h3>
+<p>In this example, the user has manually selected five points of interest in the ICHdw1 BGC unit in the Slocan Valley using Option 1 outlined in Step 1 above. Using the default model parameters and default settings for reporting, the user will obtain a separate result for each of the five selected points.</p>
+<figure style="text-align:center;" class="figure">
+<p><img src="Figure_Instructions_SelectSites.png" style="width:75%;" class="figure-img"></p>
+<figcaption style="font-size: 0.8em; color: gray;">
+<p>Figure 2: First panel of CCISS tool with five points selected in the ICHdw1 BGC unit.</p>
+</figcaption>
+</figure>
+</section>
+</section>
+<section id="suitability-report" class="level2" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="suitability-report"><span class="header-section-number">3.3</span> SUITABILITY REPORT</h2>
+<p>In this second tab, users can access the main report of the CCISS tool. The default output is the <strong>Detailed</strong> report, which shows the distribution of suitability ratings for the global climate model (GCM) ensemble in each time period. The <strong>Summary</strong> provides a comparison of the Chief Forester’s Reference Guide (CFRG) species ecological suitability and the CCISS environmental suitability projections. Users can toggle back and forth between the <strong>Summary</strong> and <strong>Detailed</strong> version using the slider on the left-hand side of the screen, under <em>Report Type</em> (more detail below).</p>
+<p>The concept and definitions of environmental suitability ratings and their relationship to stocking standards (according to the CFRG) and CCISS model projections are discussed in more detail in the Suitability Ratings section of the Methods documentation.</p>
+<section id="selectionfilter-pane" class="level3" data-number="3.3.1">
+<h3 data-number="3.3.1" class="anchored" data-anchor-id="selectionfilter-pane"><span class="header-section-number">3.3.1</span> Selection/Filter pane</h3>
+<p>In the left pane, users can select the point or BGC subzone-variant and then the site series of interest. The edatopic space of the selected site series is displayed in the graphic below for reference (see example in Figure 1 and 2 below). By default the report will show all species that are predicted to be suitable in at least one model and time period. Users have the option to choose the <em>Suitable Only</em> option to limit the list to species that meet the threshold for classification as suitable across the GCM ensemble in any of the time periods. Users can also opt to include outside home range (OHR) species here. For more information on OHR species, visit Documentation - Methods - Outside Home Range.</p>
+</section>
+<section id="detailed-report" class="level3" data-number="3.3.2">
+<h3 data-number="3.3.2" class="anchored" data-anchor-id="detailed-report"><span class="header-section-number">3.3.2</span> Detailed report</h3>
+<p>The <strong>Detailed</strong> report shows modelled suitability ratios for each species in the selected site series for each time period. The colour legend for suitability ratings is on the left hand pane. The mapped BGC unit represents the historic climate approximated by the climatic conditions of the 1961-1990 period. The recent time period (2001-2020) has two bars: one for the observed climate (measured by weather stations), and one for the climates simulated by the ensemble of GCMs. These two bars are not necessarily expected to agree: the modelled climates sample a large range of possible recent conditions, of which the observed recent climate is only one.</p>
+<p>The report then summarizes the historical suitability ratings and CCISS projected suitability ratings for each species in the following order:</p>
+<ol type="1">
+<li><p>The <strong>CFRG suitability</strong> rating: Ecological suitability ratings for a timber objective taken from the Chief Forester’s Reference Guide for Stocking Standards (CFRG)</p></li>
+<li><p>The <strong>CFRG P/A</strong> value: Preferred/Acceptable ratings taken directly from the CFRG</p></li>
+<li><p>The <strong>Historical Environmental Suitability</strong>: Expert derived baseline (1961-1990) environmental suitability rating for site series.</p></li>
+<li><p><strong>CCISS Establishment Suitability</strong>: The weighted average suitability rating based on the historical environmental suitability (1961-1990), and CCISS projected suitability based on recent observed (2001-2020), and 2021-2040 future projected climates. This indicates the likely level of constraints for successful establishment of the species in the present climate. Default model settings give roughly equal weight to the three time periods, with slightly more weight to the recent (2001+) periods.</p></li>
+<li><p><strong>CCISS Maturation Suitability</strong>: The weighted average suitability rating projected across the four 20-year normal periods (2021-2100). This indicates the inferred suitability of successfully growing an established species to maturity (80 years). Default model settings equally weight all time periods.</p></li>
+<li><p><strong>Trend</strong>: The proportion of the GCM simulations indicating improving/stable suitability (numerator) vs.&nbsp;declining suitability or remaining unsuitable.</p></li>
+</ol>
+<p><em>Reminder:</em> The weights used to calculate Establishment Suitability and Maturation Suitability can be modified using the “Adjust Parameters” dialog box in the “Select Sites” tab.</p>
+<section id="novel-climates" class="level4" data-number="3.3.2.1">
+<h4 data-number="3.3.2.1" class="anchored" data-anchor-id="novel-climates"><span class="header-section-number">3.3.2.1</span> Novel climates</h4>
+<p>Climatic novelty refers to the difference between future climate condition and the climate condition of the closest biogeoclimatic analog. Where future climates are highly novel, i.e.&nbsp;there is substantial difference between the future climate condition and the closest analog, there is much higher uncertainty around species suitability projections. By default, biogeoclimatic projections with high (5<span class="math inline">\(\sigma\)</span>) novelty are removed from CCISS results and replaced with a black bar in the detailed suitability results. Removal of novel climates can be disabled or adjusted using the “Adjust Parameters” dialog box in the “Select Sites” tab. If novel climates are not removed, the CCISS tool makes the assumption that all future analogs are equal, despite the novel climates potentially not being good analogs. See Documentation - Methods - Novel Climates for more details.</p>
+</section>
+</section>
+<section id="summary-report" class="level3" data-number="3.3.3">
+<h3 data-number="3.3.3" class="anchored" data-anchor-id="summary-report"><span class="header-section-number">3.3.3</span> Summary report</h3>
+<p>This report compares CCISS projected suitability at maturity with the Chief Forester’s Reference Guide ecological suitability. Species codes are coloured according to trends in their future suitability using the legend at the bottom of the selection pane: improving (green), or decreasing (red). Species added to the CCISS projected stocking standard* are coloured purple, and species dropped from the CCISS projected stocking standard <em>are strike-through.</em></p>
+<p>*Note: These are not formally adopted stocking standards by BC Ministry of Forests.</p>
+</section>
+<section id="example-ichdw1-cont." class="level3" data-number="3.3.4">
+<h3 data-number="3.3.4" class="anchored" data-anchor-id="example-ichdw1-cont."><span class="header-section-number">3.3.4</span> Example: ICHdw1 cont.</h3>
+<p>The following example continues using the five points selected previously in the <em>SELECT SITES</em> Instructions panel of the CCISS tool. Figure 1 shows the top few lines of the <strong>Detailed</strong> report, when the default <em>Remove highly novel climates</em> is selected through the dialog box accessed via the <strong>Model Parameters</strong> button, while Figure 2 shows how this report changes when <em>No Novelty Analysis</em> is selected instead.</p>
+<figure style="text-align:center;" class="figure">
+<p><img src="Figure_Instructions_Suitability_Novel.png" style="width:55%;" class="figure-img"></p>
+<figcaption style="font-size: 0.8em; color: gray;">
+<p>Figure 1: Example of a <strong>Detailed</strong> suitability report for the 101 - CwFd-Prince’s pine - Twinflower site series of the ICHdw1 biogeoclimatic subzone-variant in the Slocan Valley, with the option <em>Remove highly novel climates</em> selected in dialog box accessed through the <strong>Model parameters</strong> button.</p>
+</figcaption>
+</figure>
+<p>The <strong>Detailed</strong> report (Figure 1) is displaying the results for the 1st point (1 / 6530760). The seven-digit number here simply refers to the hex cell that the point is located in. In this example, we have selected the ICHdw1/101 CwFd - Prince’s pine - Twinflower site series. We can see from the bars under <em>Modelled Suitability</em> that for <strong>Fd</strong> (Douglas-fir), the mapped (historic: 1961-1990) suitability was E1: High (Documentation - Methods - Suitability Ratings). Accordingly, the CFRG rates Fd <strong>1</strong> for <em>Primary</em> and <strong>P</strong> for <em>Preferred</em> at this site. The CCISS tool projections resulted in an E1 rating at <em>Establishment</em>, and an E2 (moderate) at <em>Maturity</em>. The modelled suitability ratios <em>Trend</em> shows that 87 percent of model “votes” suggested that the suitability of <strong>Fd</strong> would either improve or stay the same, and 13 percent suggested a decline in suitability.</p>
+<p>If we return to the bar chart, under the “Mapped” bar, we see the two bars that represent the recent time period (2001-2020). From this, we can see that the weather station data (obs) and the climates simulated by the ensemble of GCMs (mod) are in agreement that Fd has been a highly suitable (E1) species at this location.</p>
+<p>The CCISS tool then allows us to evaluate the future projected environmental suitability of the tree species. We see that in the first of the future periods (2021-2040), there is not much change in the suitability of <strong>Fd</strong>. However, in the next three future periods (2041-2060, 2061-2080, and 2081-2100), we can see the introduction of novel climates. These are climates for which there is no good analog in the pool of Western North America historical climates. See Documentation - Methods - Novel Climates for more information. Since the climate in this region is projected to be distinct from other BGC analogs in Western North America, we do not know how well Douglas-fir will fare in these conditions, which means there is increased uncertainty around future suitability. Overall, the CCISS tool suggests that <strong>Fd</strong> will remain suitable to future climate at this location, with some caution around unknown suitability under novel future climate.</p>
+<p>The next species on the list is <strong>Lw</strong> (western larch). The outlook for this species is more unfavourable than for <strong>Fd</strong>. As can be seen by the green E1 bar for “Mapped”, <strong>Lw</strong> was highly suitable under historical environmental conditions in this BGC unit, and rated primary (1) by the CFRG. However, the two bars for the recent period (2001-2020) demonstrate decreasing suitability to E2. CCISS projections suggest that as early as the current (2021-2040) time period, this suitability will drop to an E3. By the end of the century, only 17% of models suggest an E3 rating for this species, with 31% predicting unsuitable, and the rest falling into a novel climate where we do not know how <strong>Lw</strong> will respond. This information suggests that <strong>Lw</strong> is a highly risky species to plant in the ICHdw1/101.</p>
+<figure style="text-align:center;" class="figure">
+<p><img src="Figure_Instructions_Suitability_NoNovel.png" style="width:55%;" class="figure-img"></p>
+<figcaption style="font-size: 0.8em; color: gray;">
+<p>Figure 2: Example of a <strong>Detailed</strong> suitability report for the 101 - CwFd-Prince’s pine - Twinflower site series of the ICHdw1 biogeoclimatic subzone-variant in the Slocan Valley, with the option <em>No Novelty Analysis</em> selected in dialog box accessed through the <strong>Model parameters</strong> button.</p>
+</figcaption>
+</figure>
+<p>In Figure 2, we see the impact that selecting “No Novelty Analysis” has on our results. In this scenario, the CCISS tool does not remove highly novel predictions, instead displaying all BGC projections including those that may not be good analogs. As a result, the CCISS gives us a more confident answer about the suitability of <strong>Fd</strong>, suggesting that its suitability until 2100 will remain fairly stable. In this example, the projected BGCs associated with novel climate contain an <strong>Fd</strong> species suitability rating of E1. Therefore, it promotes the Maturity Suitability to an E1, whereas in Figure 1, we see that it was demoted to an E2 due to the greater proportion of unsuitable (X) ratings in relation to suitable (E1) ratings. In Figure 2, the modelled suitability ratios show that 92 percent of model “votes” suggested that the suitability of Fd would either improve or stay the same, and 8 percent suggested a decline in suitability. Removing highly novel predictions represents a more conservative or cautious approach.</p>
+<figure style="text-align:center;" class="figure">
+<p><img src="Figure_Instructions_Suitability_Summary.png" style="width:55%;" class="figure-img"></p>
+<figcaption style="font-size: 0.8em; color: gray;">
+<p>Figure 3: Example of a suitability <strong>Summary</strong> report for ICHdw1/101, which shows the difference between the CCISS projected environmental suitabilities and the original ecological suitability proposed by the Chief Forester’s Reference Guide.</p>
+</figcaption>
+</figure>
+<p>Finally, we see an example of a <strong>Summary</strong> report (Figure 3). This feature allows the user to explicitly compare CCISS results with those of the CFRG. The species shown in <span style="color:red">red</span> text are decreasing in suitability. Those that are crossed out have, on average, across all time periods, GCMs, and SSPs, decreased so much that they are now predicted to be unsuitable. Species marked in <span style="color:darkgreen">green</span> are improving in suitability, but none of those exist in the current example. Finally, if the user was to switch to <em>No Novelty Analysis</em> in the <strong>Select Sites</strong> tab, under <strong>Model Parameters</strong>, they would see some species show up here in <span style="color:purple">purple</span> (Adding). Purple species are those that were not included in the CFRG because they were historically unsuitable here, but CCISS predicts future climates in which they could be suitable.</p>
+<p>In this case, we see that only two species remain suitable according to the CCISS projections <strong>Fd</strong> (E2) and <strong>Py</strong> (E3). <strong>Py</strong> (Ponderosa pine) is another interesting example, because the displayed projections (i.e.&nbsp;not novel climate) predict a divergence in suitability (E1, E3 and unsuitable), tending towards an increase in suitability over time and averaging to an E3 rating (Figure 4). This species has 80 percent of model “votes” suggesting increasing/maintained suitability, and only 20 percent suggest a decrease. However, much of the future climate is novel and there is a high degree of uncertainty around the future suitability of Py.</p>
+<p>Note on footnotes: <strong>Py</strong> has footnote 9 in the CFRG, which corresponds to <em>most suitable on warm aspects</em>. This is where applying expert knowledge to CCISS results is key, because under warmer future climate, it might actually be more suitable on cooler aspects instead.</p>
+<figure style="text-align:center;" class="figure">
+<p><img src="Figure_Instructions_PyExample.png" style="width:75%;" class="figure-img"></p>
+<figcaption style="font-size: 0.8em; color: gray;">
+<p>Figure 4: Suitability report for Ponderosa pine (Py) in this example scenario for ICHdw1/101.</p>
+</figcaption>
+</figure>
+<section id="references" class="level5" data-number="3.3.4.0.1">
+<h5 data-number="3.3.4.0.1" class="anchored" data-anchor-id="references"><span class="header-section-number">3.3.4.0.1</span> References:</h5>
+<p><a href="https://www2.gov.bc.ca/gov/content/industry/forestry/managing-our-forest-resources/silviculture/stocking-standards" target="_blank">Chief Forester’s Reference Guide</a></p>
+</section>
+</section>
+</section>
+<section id="bec-futures" class="level2" data-number="3.4">
+<h2 data-number="3.4" class="anchored" data-anchor-id="bec-futures"><span class="header-section-number">3.4</span> BEC FUTURES:</h2>
+<p>This section summarizes the biogeoclimatic (BGC) projections that underlie the species suitability forecasts. Biogeoclimatic subzone/variants (a.k.a. BGC units) are the climate component of the Biogeoclimatic Ecosystem Classification (BEC). Each user-selected location has a mapped BGC unit representing its historical climate. Biogeoclimatic projections identify a BGC unit whose historical climate is the best match (best analog) for the future climate at a user-selected location. In other words, changes in climatic conditions (temperature, precipitation, etc) are translated into a change in the BGC unit.</p>
+<section id="chart" class="level3" data-number="3.4.1">
+<h3 data-number="3.4.1" class="anchored" data-anchor-id="chart"><span class="header-section-number">3.4.1</span> Chart</h3>
+<p>Users can view the chart mode, which displays a stacked bar chart showing the ratio of future BGC analogs by time period predicted across a range of global climate model-scenario climate projections. Hovering over a stacked bar will display these proportions numerically.</p>
+<p>The recent time period (2001-2020) has two bars: one for the observed climate (measured by weather stations and interpolated across the province), and one for the modelled climates (simulated by global climate models). These two aren’t expected to agree: the modelled climates sample a large range of possible recent conditions, of which the observed recent climate is only one.</p>
+<p>The default mode of this plot simply shows the BGC analog labels. Users can specify a site series of interest and select “Site Series Overlap” on the lefthand pane, which will display the site series in the BGC analog that overlap with the edatopic position of the historic site series, along with the proportion of the edatopic overlap. The “minimum site series overlap” slider allows the user to include or exclude site series with small edatopic overlaps.</p>
+</section>
+<section id="map" class="level3" data-number="3.4.2">
+<h3 data-number="3.4.2" class="anchored" data-anchor-id="map"><span class="header-section-number">3.4.2</span> Map</h3>
+<p>After switching to the <strong>Map</strong> tab in the drop-down menu under <strong>BEC Futures</strong>, users can select the site or area of interest from the drop down menu and then select a future time period. The map will highlight the historical BGC unit in colour (pink) and the projected BGC analogs in grey. Darker greys indicate a higher proportion of global climate model projections matched that BGC analog.</p>
+</section>
+<section id="example-ichdw1-cont.-1" class="level3" data-number="3.4.3">
+<h3 data-number="3.4.3" class="anchored" data-anchor-id="example-ichdw1-cont.-1"><span class="header-section-number">3.4.3</span> Example: ICHdw1 cont.</h3>
+<p>Continuing on with the example of the ICHdw1 - Interior Cedar-Hemlock - West Kootenay Dry Warm, in the Slocan Valley, we can see the projected BGC units that inform changes to species suitability (See Suitability Report tab), displayed as stacked bar charts by selecting <strong>Charts</strong>.</p>
+<p>Note: See Documentation - Definitions - BEC Codes for the biogeoclimatic zone and subzone names.</p>
+<figure style="text-align:center;" class="figure">
+<p><img src="Figure_Instructions_BECFutureChart_Novel.png" style="width:55%;" class="figure-img"></p>
+<figcaption style="font-size: 0.8em; color: gray;">
+<p>Figure 1: Stacked bar chart showing the mapped (historic) BGC unit, the BGC unit(s) associated with observed/modelled (2001-2020) climate, as well as the ratio of future BGC climate analogs predicted by CCISS. This version of the chart was created with the default setting for climate novelty in the <strong>Select Sites</strong> tab (<em>Remove highly novel climates</em>).</p>
+</figcaption>
+</figure>
+<p>We can see that the future climate of the ICHdw1 in the Slocan Valley is predicted to much more closely resemble climates historically found in Washington, Oregon, and California. In the recent period’s modelled results, most ‘votes’ agree with the observed weather data that the climate most closely resembled that of ICHxw (Interior Cedar-Hemlock very dry warm) between 2001 and 2020. In the 2021-2040 time period, the IDFww (Interior Douglas-fir wet warm) becomes the dominant climate analog, and novel climates begin to appear. By the 2081-2100 period, the CMXxm_CA (Coastal Mixed Evergreen very dry mild California) becomes the BGC unit with the most votes. The historical analog for this climate is found in the foothills of the Sierra Nevada mountains in California (Figure 3), and it is much warmer than the historical climate in the Kootenays.</p>
+<figure style="text-align:center;" class="figure">
+<p><img src="Figure_Instructions_BECFutureChart_NoNovel.png" style="width:55%;" class="figure-img"></p>
+<figcaption style="font-size: 0.8em; color: gray;">
+<p>Figure 2: Stacked bar chart showing the mapped (historic) BGC unit, the BGC unit(s) associated with observed/modelled (2001-2020) climate, as well as the ratio of future BGC climate analogs predicted by CCISS. This version of the chart was created by changing the setting for climate novelty in the <strong>Select Sites</strong> tab to <em>No Novelty Analysis</em>.</p>
+</figcaption>
+</figure>
+<p>When we ignore climate novelty and consider all analogs as equal, we see quite a different future, with a dominance of the CWFdm_OR (Coastal White Fir dry mild Oregon) in the 2041-2060, 2061-2080, and 2081-2100 periods.</p>
+<figure style="text-align:center;" class="figure">
+<p><img src="Figure_Instructions_BECFutureMap.png" style="width:35%;" class="figure-img"></p>
+<figcaption style="font-size: 0.8em; color: gray;">
+<p>Figure 3: Map highlighting the historical BGC unit - ICHdw1 - in pink, and the future BGC analogs in grey.</p>
+</figcaption>
+</figure>
+<p>Finally, in Figure 3, we see the location of the ICHdw1 in pink and the locations of the projected BGC analogs highlighted in grey.</p>
+</section>
+</section>
+<section id="silvics" class="level2" data-number="3.5">
+<h2 data-number="3.5" class="anchored" data-anchor-id="silvics"><span class="header-section-number">3.5</span> SILVICS</h2>
+<p>This section contains information that may be useful for interpreting CCISS results and making management decisions. More information can be found in the <strong>About</strong> tab of this section.</p>
+<p>This module summarizes the silvics of each species with historic or future suitability in the selected BGC unit and site series. This information is drawn from Klinka et al.&nbsp;(2000). This information can be explored further at this <a href="https://www2.gov.bc.ca/gov/content/industry/forestry/managing-our-forest-resources/silviculture/tree-species-selection/tool-introduction/tree-species-silvics-and-comparisons" target="_blank">link</a>.</p>
+<section id="example-ichdw1-cont.-2" class="level3" data-number="3.5.1">
+<h3 data-number="3.5.1" class="anchored" data-anchor-id="example-ichdw1-cont.-2"><span class="header-section-number">3.5.1</span> Example: ICHdw1 cont.</h3>
+<p>Here’s what the output from the <strong>Silvics</strong> tab would look like given the example in the ICHdw1. The user can select the site series within the BGC subzone/variant, and select whether they want to see the Klinka et al.&nbsp;(2000) information for just suitable species, or for all species.</p>
+<figure style="text-align:center;" class="figure">
+<p><img src="Figure_Instructions_SilvicsEx.png" style="width:55%;" class="figure-img"></p>
+<figcaption style="font-size: 0.8em; color: gray;">
+<p>Figure 1: Example of the information provided by Klinka et al.&nbsp;(2000) for tolerance of species in the ICHdw1/101.</p>
+</figcaption>
+</figure>
+</section>
+</section>
+<section id="export" class="level2" data-number="3.6">
+<h2 data-number="3.6" class="anchored" data-anchor-id="export"><span class="header-section-number">3.6</span> EXPORT</h2>
+<section id="export-report" class="level3" data-number="3.6.1">
+<h3 data-number="3.6.1" class="anchored" data-anchor-id="export-report"><span class="header-section-number">3.6.1</span> Export Report</h3>
+<p>The report is designed for documentation and off-line use of a CCISS tool report session, for example, as an appendix to a site plan. We recommend including only the site series of interest to the user. Choose the “Suitable Only” option to limit the list to species that meet the threshold for inclusion as suitable in any of the time periods.</p>
+</section>
+<section id="export-data" class="level3" data-number="3.6.2">
+<h3 data-number="3.6.2" class="anchored" data-anchor-id="export-data"><span class="header-section-number">3.6.2</span> Export data</h3>
+<p>Suitability data can be exported for conducting further analyses such as calculating summary statistics for your area of interest. Suitability data exported from the CCISS tool is in “long form” with each row showing projected suitability by site of interest, site series, and tree species. Data are exported as a .CSV file; a PDF metadata report is included in the export folder.</p>
+</section>
+<section id="example-ichdw1-cont.-3" class="level3" data-number="3.6.3">
+<h3 data-number="3.6.3" class="anchored" data-anchor-id="example-ichdw1-cont.-3"><span class="header-section-number">3.6.3</span> Example: ICHdw1 cont.</h3>
+Continuing with our example in the ICHdw1, here’s what the <strong>Export</strong> page would look like.
+<figure style="text-align:center;" class="figure">
+<p><img src="Figure_Instructions_Export.png" style="width:75%;" class="figure-img"></p>
+<figcaption style="font-size: 0.8em; color: gray;">
+<p>Figure 1: Example of how a user could save data using the Export functionality in CCISS.</p>
+</figcaption>
+</figure>
+<section id="references-1" class="level4" data-number="3.6.3.1">
+<h4 data-number="3.6.3.1" class="anchored" data-anchor-id="references-1"><span class="header-section-number">3.6.3.1</span> References:</h4>
+<p>Klinka, K., J. Worrall, L. Skoda, and P. Varga. 2000. The Distribution and Synopsis of Ecological and Silvical Characteristics of Tree Species of British Columbia’s Forests. Canadian Cartographics Ltd., Coquitlam, B.C.</p>
+</section>
+</section>
+</section>
+<section id="cciss-spatial" class="level2" data-number="3.7">
+<h2 data-number="3.7" class="anchored" data-anchor-id="cciss-spatial"><span class="header-section-number">3.7</span> CCISS SPATIAL</h2>
+<p>The spatial module of the CCISS tool allows users to put CCISS results into spatial context and explore CCISS data inputs (i.e.&nbsp;BGC model and species environmental suitability ratings).</p>
+<p>Functionality of the CCISS spatial module includes:</p>
+<ul>
+<li>Maps of biogeoclimatic projections for the GCM ensemble and for five representative GCM simulations;</li>
+<li>Maps of tree species environmental suitability projections for three site types (i.e., edatopes);</li>
+<li>Overlays of climatic novelty for each biogeoclimatic or suitability projection;</li>
+<li>Pop-up interactive plots on user-selected locations ;</li>
+<li>Interactive plots of biogeoclimatic and suitability changes within user-selected subregions;</li>
+<li>Downloads of spatial data for active map layer at 200m raster resolution; and</li>
+<li>Find-A-BEC for locating specified biogeoclimatic units of Western North America.</li>
+</ul>
+<section id="subregion-type" class="level3" data-number="3.7.1">
+<h3 data-number="3.7.1" class="anchored" data-anchor-id="subregion-type"><span class="header-section-number">3.7.1</span> Subregion type</h3>
+<p>The options for Subregion type are <code>None</code>, <code>District</code> - BC Natural Resource Districts, and <code>FLP Area</code> - Forest Landscape Planning (FLP) areas. We currently provide functionality for 10 FLP areas; we will add more as they become publicly available. When a subregion is clicked on the map, an interactive plot appears to the right of the map. The plot shows ensemble mean change in biogeoclimatic unit area or species suitability; variation by GCM can be viewed by clicking the lines on the map.</p>
+</section>
+<section id="display-bgc-or-suitability" class="level3" data-number="3.7.2">
+<h3 data-number="3.7.2" class="anchored" data-anchor-id="display-bgc-or-suitability"><span class="header-section-number">3.7.2</span> Display BGC or Suitability</h3>
+<p>Select whether the map displays biogeoclimatic (BGC) units or species suitability. Subsequent dialogue boxes are customized for each of these two modes, as described below.</p>
+</section>
+<section id="bgc-mode" class="level3" data-number="3.7.3">
+<h3 data-number="3.7.3" class="anchored" data-anchor-id="bgc-mode"><span class="header-section-number">3.7.3</span> BGC mode</h3>
+<p>Select reference period (baseline) historical climate, observed recent climate (2001-2020), or future climates.</p>
+<ul>
+<li><p>When <code>Reference (1961-1990)</code> is selected, there is the option of selecting between <code>Mapped or Predicted</code> view. The <code>Mapped</code> BGC units are a rasterization of the official linework of BEC version 13. <code>Modelled</code> represents the BGC unit predicted by the biogeoclimatic model used to generate the CCISS projections. The model is trained with a sample of locations from each biogeoclimatic unit, and is not expected to perfectly reproduce the official linework.</p></li>
+<li><p>When <code>Observed (2001-2020)</code> is selected, this displays the BGC units selected by the BGC model associated with the observed (recorded) climate of 2001-2020. This time period already reflects a slight shift in the climate associated with each BGC relative to the 1961-1990 reference period and therefore the BGC climate analog selected by the model.</p></li>
+<li><p>When <code>Future (GCMs)</code> is selected, <code>Select GCM</code> controls whether the map shows ensemble results or individual GCM simulations. <code>SZ_Ensemble</code> displays the <em>biogeoclimatic subzone/variant</em> with the highest number of votes across the ensemble of 60 simulations (i.e., the ensemble vote winner); <code>Zone_Ensemble</code> shows the <em>biogeoclimatic zone</em> with the most votes. These may be different because votes for the highest-voted subzone variant may be outnumbered by votes for multiple subzone/variants from another biogeoclimatic zone. To see what the breakdown of votes was for any given location, users can click on the map, and a pop-up will appear with stacked bars showing the percent of votes for each BGC unit in each time period. For more information, see the example at the bottom of this page. <code>Select period</code> allows the user to select a time period between 2001 and 2100, split in 20-year increments. Here 2001-2020 represents the modeled results of the GCM simulations for that time period (not observed climate records).</p></li>
+</ul>
+<p>Regional summaries can be viewed by selecting <code>District</code> or <code>FLP Area</code> from the left-hand panel, and clicking on the area of interest on the map. A box will appear on the right-hand panel of the screen, where users can adjust the x-variable of interest (time, MAT - Mean Annual Temperature, MAP - Mean Annual Precipitation, CMD - Climatic Moisture Deficit , or DD5 - Growing Degree Days above 5°C). Users can also select whether they want to summarize by zone (or by subzone-variant if un-checked), and if they want to show the 2001-2020 observed period as points on the resulting plot.</p>
+</section>
+<section id="suitability-mode" class="level3" data-number="3.7.4">
+<h3 data-number="3.7.4" class="anchored" data-anchor-id="suitability-mode"><span class="header-section-number">3.7.4</span> Suitability mode</h3>
+<p>Throughout Suitability mode, there is the option of choosing a representative edatope (site type) and tree species.</p>
+<ul>
+<li><code>Select Edatope (SNR/SMR)</code> represents a Soil Nutrient Regime/Soil Moisture Regime combination. The dropdown provides the option of B2 (nutrient-poor, subxeric), C4 (nutrient-medium, mesic), or D6 (nutrient-rich, hygric). Displaying all 35 edatopes is computationally infeasible, so we chose these three edatopes to represent distinct, common site types.<br>
+</li>
+<li><code>Select species</code> allows for selection among 15 common native BC tree species. Additional species will be added in the future. Codes for each species are defined in Documentation&gt;Definitions&gt;SpeciesCodes.</li>
+</ul>
+<p>The mapping of suitability for each time period selected reflects the underlying BGC unit(s) mapped or projected.</p>
+<p>When <code>Reference (1961-1990)</code> is selected, this displayed the expert assigned suitability rating for site series that overlap the selected edatope. When <code>Mapped</code> is selected the mapping of BGC units reflects the BEC version 13 linework. When <code>Modelled</code> is selected the mapping reflects the BGC units predicted by the biogeoclimatic model used to generate the CCISS projections. The methods for assigning and definitions of these ratings are defined in Documentation&gt;Methods&gt;SuitabilityRatings.</p>
+<p>When <code>Observed (2001-2020)</code> or <code>Future (GCMs)</code> is selected, there is the option of mapping <code>Projected Suitability</code> or <code>Suitability Change</code>.</p>
+<ul>
+<li><code>Projected Suitability</code> displays the CCISS environmental suitability rating for the selected time period associated with the projected BGC units.</li>
+<li><code>Suitability Change</code> displays the change in suitability relative to the mapped reference period (1961-1990) suitability rating, increasing (blue), decreasing (red) or no change (grey). Species that are projected to become “newly suitable” in areas where they were historically unsuitable are mapped in yellow to differentiate this suitability range expansion from increases in suitability within the historically suitable range of the species (represented in blue).</li>
+</ul>
+<section id="suitability-pop-up-plot" class="level4" data-number="3.7.4.1">
+<h4 data-number="3.7.4.1" class="anchored" data-anchor-id="suitability-pop-up-plot"><span class="header-section-number">3.7.4.1</span> Suitability pop-up plot</h4>
+<p>When a location on the suitability map is clicked, a pop-up is activated providing interactive 2D plots of the change in biogeoclimatic analogs and species suitability over time at that location. There may be more than one suitability rating for individual biogeoclimatic units because in some cases the selected edatope is shared by two site series with different suitability ratings (see Documentation&gt;Methods&gt;Edatopic Overlap).</p>
+</section>
+</section>
+<section id="display-novelty" class="level3" data-number="3.7.5">
+<h3 data-number="3.7.5" class="anchored" data-anchor-id="display-novelty"><span class="header-section-number">3.7.5</span> Display Novelty</h3>
+<p>In BGC or Suitability mode, the <code>Display Novelty?</code> checkbox overlays a map of estimated climatic novelty. High climatic novelty (&gt;5σ, red colors) indicates that the biogeoclimatic subzone/variant identified by the biogeoclimatic model is a very poor analog for the future climate condition, even though it is the best (i.e.&nbsp;closest in climatic space) available. The CCISS tool uses a default dissimilarity threshold of 5-sigma (5σ) to infer a novel climate and exclude the biogeoclimatic analog. Novelty in the 3-5σ range can be interpreted as a poor analog. In this range, species suitability inferences may be useful but are also likely to be somewhat misleading. The methods and interpretation of climatic novelty are explained in Documentation&gt;Methods&gt;Novel Climates.</p>
+<section id="novelty-pop-up-plot" class="level4" data-number="3.7.5.1">
+<h4 data-number="3.7.5.1" class="anchored" data-anchor-id="novelty-pop-up-plot"><span class="header-section-number">3.7.5.1</span> Novelty pop-up plot</h4>
+<p>When a location on the novelty map is clicked, a pop-up is activated providing an interactive 3D plot comparing future climates to the historical climate of the analog. Click and drag to spin the plot. This plot is the same for all locations that have the same biogeoclimatic analog for the selected GCM and time period. Blue dots are the spatial variation in baseline (1961-1990) climates of the analog. Black dots are the 1951-1990 interannual climatic variability (ICV) of the BGC analog. Filled circles (grey-yellow-red) are projected climates of locations in British Columbia that are assigned the analog by the BGC model, with colours indicating sigma novelty consistent with the map legend. The cross symbol represents the ‘selected location’, the average climate of the projected future/observed time period selected for the location that has been clicked (i.e.&nbsp;individual raster cell). The axes of the plot are principal components (PCs) of analog variation, with PC1 being the axis with the most variation in the plotted points, and PC3 having the least. Labelled lines indicate correlations of the input variables with the 3 PCs that comprise the viewspace.</p>
+</section>
+</section>
+<section id="hideshow-layer" class="level3" data-number="3.7.6">
+<h3 data-number="3.7.6" class="anchored" data-anchor-id="hideshow-layer"><span class="header-section-number">3.7.6</span> Hide/Show Layer</h3>
+<p>This button removes the CCISS layer to reveal the basemap. This is useful for comparing the CCISS maps to the topography, satellite photo, or baseline BGC linework. These basemaps can be selected in the top right-hand corner of the map:</p>
+<figure style="text-align:center;" class="figure">
+<p><img src="Figure_2f_basemaps.png" style="width:60%;" class="figure-img"></p>
+<figcaption style="font-size: 0.8em; color: gray;">
+<p>Figure 1: Demonstration of how basemaps can be selected in CCISS spatial.</p>
+</figcaption>
+</figure>
+</section>
+<section id="find-a-bec" class="level3" data-number="3.7.7">
+<h3 data-number="3.7.7" class="anchored" data-anchor-id="find-a-bec"><span class="header-section-number">3.7.7</span> Find-A-BEC</h3>
+<p>The <code>Find-A-BEC</code> feature helps with locating specified biogeoclimatic units of Western North America. Select the BGC zone of interest and then use <code>Deselect All</code> to select a subset of subzone/variants within that zone. Applying the <code>Gray non-selected BGCs</code> checkbox assists with finding the selected unit(s).</p>
+<figure style="text-align:center;" class="figure">
+<p><img src="Figure_2f_FindABEC.png" style="width:40%;" class="figure-img"></p>
+<figcaption style="font-size: 0.8em; color: gray;">
+<p>Figure 2: Demonstration of the Find-a-BEC function in CCISS spatial.</p>
+</figcaption>
+</figure>
+</section>
+<section id="export-data-from-cciss-spatial" class="level3" data-number="3.7.8">
+<h3 data-number="3.7.8" class="anchored" data-anchor-id="export-data-from-cciss-spatial"><span class="header-section-number">3.7.8</span> Export data from <strong>CCISS Spatial</strong>:</h3>
+<p>Data from <strong>CCISS Spatial</strong> are downloadable as raster files. Users can opt to download data for the whole province by clicking on the gray <strong>Download Province</strong> button at the bottom of the left-hand panel, or they can select a specific district or FLP area in the same panel. If they select a district or FLP area of interest, a pop up appears on the right-hand side (also where users can view the regional summaries). Here, users can download the raster file of the map they are currently viewing.</p>
+</section>
+<section id="example-ichdw1-cont.-4" class="level3" data-number="3.7.9">
+<h3 data-number="3.7.9" class="anchored" data-anchor-id="example-ichdw1-cont.-4"><span class="header-section-number">3.7.9</span> Example: ICHdw1 cont.</h3>
+<p>Throughout the <strong>Instructions</strong>, we have been following an example of the ICHdw1 in the Slocan Valley of BC. Here, here we see the projected BGC analogs for this area. In Figure 3, we have selected to display BGCs, and are opting to look at the future. We selected the <code>SZ_Ensemble</code>, which represents the ensemble vote winner (i.e., BGC analog with the most votes) in the 2061-2080 time period. When we hover over the area represented by the black dot, we can see the Layer Info box that reads <strong>Predicted BGC: CWFdm_OR</strong>. When we click on this spot, the BGC Projections pop-up appears, which gives a breakdown of the different BGC units (i.e., subzone/variants) that were predicted by each of the model runs. We can see that indeed, in the 2061-2080 period, the CWFdm_OR - Coastal White Fir dry maritime Oregon - has the most votes, and that it received roughly 50% of votes for that period.</p>
+<figure style="text-align:center;" class="figure">
+<p><img src="Figure_Instructions_CCISSspatial_future_and_popup.png" style="width:55%;" class="figure-img"></p>
+<figcaption style="font-size: 0.8em; color: gray;">
+<p>Figure 3: BGC projections - SZ_Ensemble, which displays the <em>biogeoclimatic subzone/variant</em> with the highest number of votes across simulations. At the point of interest (black dot) added here, the ensemble vote winner (i.e., BGC unit with the most “votes”, is CWFdm_OR).</p>
+</figcaption>
+</figure>
+<p>Next, in Figure 4, we have selected <code>Zone_Ensemble</code> from the <strong>Select GCM</strong> dropdown menu. We can now see the predicted biogeoclimatic zone rather than subzone/variant. This zone is selected by adding up the votes for each zone. We can see that it is the CWF - Coastal White Fir - that has the most votes in the 2061-2080 time period.</p>
+<figure style="text-align:center;" class="figure">
+<p><img src="Figure_Instructions_CCISSspatial_futureZONE.png" style="width:55%;" class="figure-img"></p>
+<figcaption style="font-size: 0.8em; color: gray;">
+<p>Figure 4: BGC projections - ZONE_Ensemble, which displays the <em>biogeoclimatic zone</em> with the highest number of votes across simulations. At the point of interest (black dot) added here, it is the CWF zone.</p>
+</figcaption>
+</figure>
+<p>We can also look at tree species suitability over time, in three different edatopes. In Figure 5, we remain centered on the Slocan Valley of British Columbia. In this example, we have now selected to display <code>Suitability</code> rather than <code>BGC</code>. We selected the C4 edatope, and <strong>Fd</strong> (Douglas-fir). For a list of species codes, see Documentation&gt;Definitions&gt;Species Codes.</p>
+<p>In this map, we are looking at projected suitabilities for the 2061-2080 time period. The <span style="color:darkgreen">green</span> text represents areas with E1, or high suitability, while <span style="color:blue">blue</span> demonstrates areas with E2, or moderate suitability. The <span style="color:yellow">yellow</span> areas have low suitability, and white areas are unsuitable for <strong>Fd</strong>.</p>
+<figure style="text-align:center;" class="figure">
+<p><img src="Figure_Instructions_CCISSspatial_suitabilities.png" style="width:55%;" class="figure-img"></p>
+<figcaption style="font-size: 0.8em; color: gray;">
+<p>Figure 5: Still centered around the Slocan Valley, this map shows projected future suitabilities for Fd (Douglas-fir) in the 2061-2080 future period. Green is E1: High, blue is E2: Moderate, yellow is E3: Low suitability, and white is unsuitable.</p>
+</figcaption>
+</figure>
+<p>We can also look at suitability in a different way. Rather than viewing the suitability for a species in each time period separately, we can opt to look at the <em>change</em> in suitability over time (selecting <code>Suitability Change</code>). In this map, we see that the suitability ratings for <strong>Fd</strong> in the C4 edatope in the Slocan Valley are expected to decrease by the 2061-2080s. These areas of decrease are marked with a gradient of shades of <span style="color:red">red</span>. Meanwhile, higher elevation areas upward from the valley are projected to increase in suitability. Areas where suitability is expected to increase are shown in <span style="color:blue">blue</span>. Finally, areas that are becoming newly suitable are shown in shades of <span style="color:yellow">yellow</span>.</p>
+<figure style="text-align:center;" class="figure">
+<p><img src="Figure_Instructions_CCISSspatial_suitabilitychange.png" style="width:55%;" class="figure-img"></p>
+<figcaption style="font-size: 0.8em; color: gray;">
+<p>Figure 6: Map representing the change in suitability, as compared to the historic period (1961-1990) in the Slocan Valley area.</p>
+</figcaption>
+</figure>
+<p>In this area, the CCISS tool predicts a lot of novel climates (i.e., climates with no good historical analogs). We can see that by clicking on the <code>Display Novelty?</code> checkbox at the bottom of the left-hand panel. This means that there is much uncertainty about how species will respond to changes in climate here, because there are no historical areas within Western North America that have experienced these exact climate conditions.</p>
+<figure style="text-align:center;" class="figure">
+<p><img src="Figure_Instructions_CCISSspatial_novelty.png" style="width:55%;" class="figure-img"></p>
+<figcaption style="font-size: 0.8em; color: gray;">
+<p>Figure 7: Degree of climate novelty. Red is very high novelty (&gt;5σ) and represents a very bad analog, yellow is high novelty (3-5σ) and represents a poor analog, and white represents areas without novel climates.</p>
+</figcaption>
+</figure>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./Overview.html" class="pagination-link" aria-label="Overview">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Overview</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./Methods.html" class="pagination-link" aria-label="Methods (How the Tool Works)">
+        <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Methods (How the Tool Works)</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

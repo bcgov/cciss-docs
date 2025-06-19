@@ -1,0 +1,509 @@
+# Definitions
+
+## Glossary of Terms
+
+**Assisted migration:**
+<p style="margin-left: 2em;"> Assisted migration is the human-assisted relocation of species to new habitats, where they have not occurred in the past, to help them adapt to environmental change, including climate change. One of the goals of the CCISS tools is to help identify tree species that would make good candidates for assisted migration. </p>
+
+**Biogeoclimatic Ecosystem Classification (BEC)**: 
+<p style="margin-left: 2em;"> Biogeoclimatic Ecosystem Classification is a tool used to classify ecosystems in British Columbia according to vegetation, climate, and soils. It is often used in forestry and conservation in the province, and relies on the classification of ecosystems according to mature (climax) successional stages. For more information, see the <a href="https://www.for.gov.bc.ca/hre/becweb/" target="_blank">BEC website</a>.</p>
+
+**Biogeoclimatic projections:**
+<p style="margin-left: 2em;">Biogeoclimatic projections are modelled forecasts that predict how climate analogs of biogeoclimatic subzone/variants may shift over time in response to climate change. They involve using a statistical model to assign climate analogs of projected biogeoclimatic subzone/variants, and subsequently, which tree species will be suitable at a location over time.  </p>
+
+**Biogeoclimatic subzone/variants (i.e., BGC units):**
+<p style="margin-left: 2em;"> Biogeoclimatic subzone/variants are the biogeoclimatic map units of reference that the CCISS tool uses. In BEC 13, there are 211 BGC units. Each unit is classified by its biogeoclimatic zone (Definitions - BEC Codes - Table 1), and its subzone/variant (Definitions - BEC Codes - Table 2). Subzones are represented by the unit's relative precipitation and temperature, and variants are different clusters of subzones in the province, denoted with a number. For example, the ESSFdc1 BGC unit is part of the Engelmann Spruce - Subalpine Fir biogeoclimatic zone, and the *dc1* component designates it as the Okanagan Dry Cold subzone/variant. For a complete list of BGC subzone/variants, see the <a href="https://www.for.gov.bc.ca/hre/becweb/resources/classificationreports/subzones/index.html" target="_blank">BEC website</a>.</p>
+
+**Chief Forester's Reference Guide (CFRG):**
+<p style="margin-left: 2em;"> The <a href="https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/forestry/silviculture/stocking-standards/reference-guide/reference_guide_stocking_standards_20210907.xlsx" target="_blank">Chief Forester's Reference Guide for Stocking Standards</a> is the official guide to choosing suitable species and stocking levels for reforestation programs in British Columbia. </p>
+
+**Classification model:**
+<p style="margin-left: 2em;"> A classification model is a type of machine learning model (including that ensemble learning models such as Random Forest) that categorizes input data into predefined classes based on patterns in the data. In CCISS, it is used to classify future climate conditions into biogeoclimatic subzone/variant analogs based on climate variables. For more information, see *Random Forest model*. </p>
+
+**Climate:**  
+*Baseline climate:*  
+<p style="margin-left: 2em;"> The historical climate used to compare observed climates of more recent periods or simulated future climates. The CCISS baseline period is 1961-1990. </p>
+*Target climate:*  
+<p style="margin-left: 2em;"> The current or future climate condition for which a historical analog is identified, and for which novelty is being measured. In CCISS, these are climatic averages over 20-year periods (2001-2020 through 2081-2100) for locations throughout BC. </p>
+*Analog climate:*   
+<p style="margin-left: 2em;"> The baseline climate condition assessed as being most similar to the target condition, among a set of candidate analogs. The analog pool for CCISS is the 1961-1990 climates of the biogeoclimatic subzone-variants of Western North America. </p>
+
+**Climate analogs:** 
+<p style="margin-left: 2em;"> Also known as biogeoclimatic (BGC) analogs, a climate analog is a location with a historical climate that is similar to the current or future projected climate of a different location. </p> 
+
+**Climate projections:**
+<p style="margin-left: 2em;"> Climate projections are model-based estimates of future climate conditions, including future precipitation and temperature in an area. These projections can be based on different greenhouse gas emissions scenarios. </p>
+
+**Ecological suitability for a timber objective:** 
+<p style="margin-left: 2em;"> This is a term used in the Chief Forester's Reference Guide. It refers to tree species that have been ranked and evaluated to optimize maximum sustainable productivity, crop reliability, and silvicultural feasibility. Species are designated as preferred or acceptable. **Preferred** species are ecologically suited to a site, and their establishment is a management priority. **Acceptable** species are also ecologically suited, but their establishment is not a management priority. Both conifer and broadleaf species are designated as preferred or acceptable. Only conifer species are also ranked as primary, secondary, or tertiary. **Primary** species are ecologically acceptable, and have high silvicultural feasibility, reliability, and productivity. **Secondary** species are also ecologically acceptable, but rank lower than primary species on feasibility, reliability, and productivity. Finally, **tertiary** species are also acceptable but rank lowest.</p>
+
+<p style="margin-left: 2em;"> These definitions differ from the environmental suitability definitions used in the CCISS tool. For these, see Definitions - Suitability Definitions. For more information about Ecological suitability for a timber objective, see, for example, this report from the <a href="https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/forestry/silviculture/stocking-standards/efgg/efg-car-print.pdf" target="_blank">Cariboo Forest Region</a>.</p>
+
+**Edatopic grid:**
+<p style="margin-left: 2em;"> In the BEC system, variations in site conditions within each climate type (i.e., biogeoclimatic subzone/variant) are represented by an edatopic grid. An edatopic grid has 8 relative soil moisture regimes (SMRs) and 5 soil nutrient regimes (SNRs). Each cell in this grid, called an edatope, is the combination of one SMR and one SNR, and represents the finest scale of site differentiation in the BEC system. A site series is a group of edatopes over which a classified BEC Plant Association has been observed to occur. The distribution of site series across the edatopic grid is unique to each biogeoclimatic subzone/variant. </p>
+
+**Ensemble:**
+<p style="margin-left: 2em;">In the CCISS context, ensemble refers to a collection of independent climate model simulations used to capture a range of possible future climate outcomes and account for modeling uncertainty. CCISS quantifies three types of climate change uncertainty: modeling uncertainty, natural variability, and socioeconomic uncertainty. Rather than producing a single species suitability value, CCISS provides an 'ensemble' - i.e., a distribution of 60 suitability values (8 climate models x 1-3 simulation runs x 3 socioeconomic scenarios) for each future time-period. </p>
+
+**Environmental suitability:**
+<p style="margin-left: 2em;"> In CCISS, environmental suitability represents a response curve of species' tolerances to environmental (climatic and edaphic) gradients. CCISS incorporates historical (1961-1990) tree species suitability ratings for all site series in British Columbia as determined by expert knowledge. For more information, see Methods - Suitability Ratings. </p>
+
+**Establishment suitability:**
+<p style="margin-left: 2em;"> The suitability rating based on the mean historic, current (2001-2020), and 2021-2040 future projected suitabilities. This indicates the likely level of constraints for successful establishment of the species now.</p>
+
+**Forecast:**   
+<p style="margin-left: 2em;">“Projection”, “prediction”, and “forecast” are related terms with varying usage in ecology and climate science. See also "projection" and "prediction" in this glossary for a better understanding of all three terms. </p>
+
+<p style="margin-left: 2em;">A forecast is an estimate of possible future states of a variable of interest. A forecast is not a “crystal ball” of what will happen, but a quantification of uncertainty in what could happen. Providing forecasts of environmental suitability for tree species is the ultimate goal of CCISS. CCISS forecasts are a synthesis of many projections of tree species suitability that have been carefully selected to provide a meaningful representation of uncertainty.</p> 
+
+**Fundamental niche:**
+<p style="margin-left: 2em;"> A fundamental niche represents the full potential range of conditions a species could occupy, in theory, without limitations imposed by biotic interactions, such as competition. Compare with *realized niche* below. </p>
+
+**Global climate models (GCMs)**: 
+<p style="margin-left: 2em;"> "Global climate model" is a generic term that encompasses both Earth System Models and General Circulation Models. General Circulation Models model the physics of the ocean, atmosphere, land surface, and typically also the ice caps/sheets. Earth System Models additionally also model biogeoclimatic cycles (e.g., carbon cycle mechanisms such as vegetation growth, forest fires, etc).  </p>
+
+**Historic suitability:**
+<p style="margin-left: 2em;">The baseline environmental suitability rating based primarily on the expert suitability ratings of the historic period (19961-1990).</p>
+
+**Maturation suitability:**
+<p style="margin-left: 2em;">The mean suitability rating projected across the four 20-year normal periods (2021-2100). This indicates the inferred suitability of successfully growing an established species to maturity (80 years). </p>
+
+**Novel climate/novelty:**
+<p style="margin-left: 2em;"> A novel climate occurs when the projected future climate conditions in an area differ significantly from any historical climate analog available in western North America, making it difficult to find a reliable comparison. In the CCISS framework, climatic novelty is quantified using sigma dissimilarity, which compares future climates to the combined spatial and temporal variation of historical climate analogs.</p>
+
+**Off-site:** See Out Home Range (OHR). 
+<p style="margin-left: 2em;"> </p>
+
+**Out Home Range (OHR) Suitability:** 
+<p style="margin-left: 2em;"> The term “outside home range” refers to tree species environmental suitability ratings that have been assigned in a geographical area (i.e. biogeoclimatic subzone-variant) where the species does not occur naturally. In some cases, OHR species were restricted by something other than climate, such as migration limitations (for example, western larch) or forest health factors (for example, Western white pine limited by blister rust). In CCISS, we have included an environmental suitability rating for OHR species with strong evidence of being well adapted to the climatic conditions of the historical reference period (1961–1990), which serves as the basis for these ratings. </p>
+
+**Prediction:**   
+<p style="margin-left: 2em;"> “Projection”, “prediction”, and “forecast” are related terms with varying usage in ecology and climate science. See also "projection" and "forecast" in this glossary for a better understanding of all three terms. </p>
+
+
+<p style="margin-left: 2em;"> In CCISS, the term prediction is used exclusively as *model prediction*: the process by which a statistical model estimates a response variable (i.e., biogeoclimatic subzone/variant analog) based on predictor variables (i.e., climate variables). A model prediction can be made for any values of the predictor variables regardless of whether they represent past, future, or hypothetical conditions. Each biogeoclimatic projection for one 20-year time period is a model prediction. </p>
+
+
+**Projection:**   
+<p style="margin-left: 2em;"> “Projection”, “prediction”, and “forecast” are related terms with varying usage in ecology and climate science. See also "forecast" and "prediction" in this glossary for a better understanding of all three terms. </p>
+
+<p style="margin-left: 2em;"> A projection is an estimate of the change over time in a variable of interest given a specific set of assumptions. CCISS provides one projection of tree species suitability for each of three simulations of eight global climate models following three atmospheric greenhouse gas concentration scenarios. The 2001-2020 period of these simulations is considered a projection even though it occurs in the past. </p>
+
+**Random Forest model:**
+<p style="margin-left: 2em;"> A Random Forest model is an ensemble learning method that constructs multiple decision trees during training, and combines their outputs to improve predictive accuracy and to prevent overfitting. It works by randomly selecting subsets of data and features (variables) for each tree. In the case of classification models, including the ones used in CCISS, it then uses majority voting to classify projected biogeoclimatic subzone/variants (i.e., the most frequently chosen BGC subzone/variant is the final classification). </p>
+
+**Realized niche:**
+<p style="margin-left: 2em;"> A realized niche is the actual environmental conditions and resources that a species occupies and uses, considering competition, predation, and other biotic interactions. This makes it narrower than a *fundamental niche* (see above). </p>
+
+**Shared Socioeconomic Pathways (SSPs):**
+<p style="margin-left: 2em;">Shared Socioeconomic Pathways (SSPs) are future global development scenarios that describe different ways that society, economics, and policies might evolve regarding greenhouse gas emissions and their impacts on climate change. CCISS includes projections for three SSP scenarios: SSP1-2.6, SSP2-4.5, and SSP3-7.0, representing optimistic, moderate, and high-emission futures. SSP1-2.6 aligns with strong mitigation efforts to limit warming to 2°C, SSP2-4.5 reflects current policies with moderate mitigation, and SSP3-7.0 assumes no mitigation, leading to steadily increasing emissions.</p>
+
+**Site series:**
+<p style="margin-left: 2em;"> A site series is a group of edatopes (i.e., unique combinations of soil moisture regimes and soil nutrient regimes) over which a classified BEC Plant Association has been observed to occur. The distribution of site series across the edatopic grid is unique to each biogeoclimatic subzone/variant. See also *edatopic grid*.</p>
+
+**Stocking standards:**
+<p style="margin-left: 2em;"> Stocking standards are regulations or guidelines that define the distribution and composition of trees that must be established after harvesting to ensure successful forest regeneration. Specifically, these standards designate densities, acceptable species, and spacing requirements. </p>
+
+**Suitability projections:**
+<p style="margin-left: 2em;"> Suitability projections refer to the future tree species suitability ratings forecasted by the CCISS tool (see Methods - Suitability Ratings). </p>
+
+**Uncertainty:**
+<p style="margin-left: 2em;">In reference to CCISS, uncertainty refers to the range of potential variability in model predictions, and comes from various sources. CCISS quantifies three types of climate change uncertainty: modeling uncertainty, natural variability, and socioeconomic uncertainty. These uncertainties are represented by calculating CCISS results for a large ensemble of potential future climate states. For more information, see Methods - Climate Change Projections.  </p>
+
+## Species codes
+
+Full list of tree species codes is available
+<a href="https://www.for.gov.bc.ca/hre/becweb/resources/codes-standards/standards-species.html" target="_blank">here</a>.
+
+Table 1. Codes of common tree species mentioned in the CCISS
+documentation and CCISS Spatial. 
+
+|                        |                              |           |
+|------------------------|------------------------------|-----------|
+| **Common Name**        | **Latin Name**               | **Code**  |
+| Amabilis fir           | *Abies amabilis*             | Ba        |
+| Black cottonwood       | *Populus trichocarpa*        | Ac        |
+| Black spruce           | *Picea mariana*              | Sb        |
+| Common paper birch     | *Betula papyrifera*          | Ep        |
+| Douglas-fir            | *Pseudotsuga menziesii*      | Fd        |
+| Grand fir              | *Abies grandis*              | Bg        |
+| Interior spruce        | *Picea glauca × engelmannii* | Sx        |
+| Limber pine            | *Pinus flexilis*             | Pf        |
+| Lodgepole pine         | *Pinus contorta*             | Pl        |
+| Ponderosa pine         | *Pinus ponderosa*            | Py        |
+| Rocky Mountain juniper | *Juniperus scopulorum*       | Jr        |
+| Sitka spruce           | *Picea sitchensis*           | Ss        |
+| Subalpine fir          | *Abies lasiocarpa*           | Bl        |
+| Trembling aspen        | *Populus tremuloides*        | At        |
+| Western hemlock        | *Tsuga heterophylla*         | Hw        |
+| Western larch          | *Larix occidentalis*         | Lw        |
+| Western redcedar       | *Thuja plicata*              | Cw        |
+| Western white pine     | *Pinus monticola*            | Pw        |
+| Yellow-cedar           | *Callitropsis nootkatensis*  | Yc        |
+
+## Biogeoclimatic Ecosystem Classification (BEC) Codes
+
+Full lists of biogeoclimatic units and site series available
+<a href="https://www.for.gov.bc.ca/hre/becweb/resources/codes-standards/standards-becdb.html#intro" target="_blank">here</a>.
+
+Each biogeoclimatic unit (subzone/variant) is named with a combination
+of a biogeoclimatic zone (Tables 1 & 2), a subzone code for
+precipitation and temperature (Table 3). Sometimes, a modifier for
+continentality (Table 3) and variant are also necessary. Variants are
+numeric designations that refer to adjacent biogeoclimatic subzones at
+different locations in the province. Numbers are assigned in a
+south-to-north fashion. For example, consider the ICHmc1 unit. The ICH
+indicates that the unit is in the Interior Cedar - Hemlock
+biogeoclimatic zone (Table 1). The *m* indicates that the precipitation
+is *moist*, and the *c* indicates that the temperature is *cold*.
+Several discrete areas (i.e., variants) in the province fall into the
+ICHmc biogeoclimatic subzone, so the 1 represents the Nass regional
+variant of ICHmc. For subzone/variants in the USA a state code has been
+added following an underscore (Table 4), e.g. CWHdm_OR.
+
+   
+
+Table 1. Codes of BEC 13 biogeoclimatic zones with BC:
+
+|                                    |           |
+|------------------------------------|-----------|
+| **Name**                           | **Code**  |
+| *Boreal Altai Fescue Alpine*       | BAFA      |
+| *Bunchgrass*                       | BG        |
+| *Boreal White and Black Spruce*    | BWBS      |
+| *Coastal Douglas-fir*              | CDF       |
+| *Coastal Mountain-heather Alpine*  | CMA       |
+| *Coastal Western Hemlock*          | CWH       |
+| *Engelmann Spruce - Subalpine Fir* | ESSF      |
+| *Interior Cedar - Hemlock*         | ICH       |
+| *Interior Douglas-fir*             | IDF       |
+| *Interior Mountain-heather Alpine* | IMA       |
+| *Mountain Hemlock*                 | MH        |
+| *Montane Spruce*                   | MS        |
+| *Ponderosa Pine*                   | PP        |
+| *Sub-Boreal Pine - Spruce*         | SBPS      |
+| *Sub-Boreal Spruce*                | SBS       |
+| *Spruce - Willow - Birch*          | SWB       |
+
+   
+
+Table 2. Codes of BEC 13 biogeoclimatic external to BC:
+
+|                                           |           |
+|-------------------------------------------|-----------|
+| **Name**                                  | **Code**  |
+| *Boreal Spruce and Jack Pine*             | BSJP      |
+| *California Chaparrel*                    | CCH       |
+| *Coastal Mixed Evergreen*                 | CMX       |
+| *Coastal Redwood Forest*                  | CRG       |
+| *California Valley Grassland*             | CVG       |
+| *Coastal White Fir*                       | CWF       |
+| *Fescue Grassland*                        | FG        |
+| *Great Basin Desert*                      | GBD       |
+| *Gambel Oak*                              | GO        |
+| *Interior Grand Fir*                      | IGF       |
+| *Interior White Fir*                      | IWF       |
+| *Juniper – Pine Woodland*                 | JPW       |
+| *Madrean Chaparral*                       | MDCH      |
+| *Mixed-grass Prairie*                     | MGP       |
+| *Mountain Hemlock Cedar – Shasta Red Fir* | MHRF      |
+| *Montane Mountain Mahogony*               | MMM       |
+| *Mojave – Sonoran Semi-Desert*            | MSSD      |
+| *Oak Woodland*                            | OW        |
+| *Sub-arctic Spruce*                       | SAS       |
+| *Sub-boreal Aspen Parkland*               | SBAP      |
+| *Shortgrass Prairie*                      | SGP       |
+| *Western Juniper – Pine*                  | WJP       |
+
+   
+
+Table 3. Subzone names and codes for relative precipitation, relative
+temperature, and continentality.
+
+|               |           |
+|---------------|-----------|
+| **Name**      | **Code**  |
+| Very dry      | x         |
+| Dry           | d         |
+| Moist         | m         |
+| Wet           | w         |
+| Very wet      | v         |
+|               |           |
+| Hot           | h         |
+| Warm          | w         |
+| Mild          | m         |
+| Cool          | k         |
+| Cold          | c         |
+| Very cold     | v         |
+|               |           |
+| Hypermaritime | h         |
+| Maritime      | m         |
+| Submaritime   | s         |
+
+   
+
+Table 4. State codes for subzones in the USA (e.g. CDFmm_OR).
+
+|            |           |
+|------------|-----------|
+| **State**  | **Code**  |
+| California | CA        |
+| Colorado   | CO        |
+| Idaho      | ID        |
+| Montana    | MT        |
+| Nevada     | NV        |
+| Oregon     | OR        |
+| Utah       | UT        |
+| Washington | WA        |
+| Wyoming    | WY        |
+
+## Suitability Definitions
+
+We define environmental suitability using five categories:
+
+**E1 -- High environmental suitability**: Species well within its
+environmental tolerance range.
+
+-   Widespread establishment/regeneration success on all climate and
+    edaphic conditions representative of the site series. Expect
+    continuous distribution at a landscape or stand level.
+
+-   Good growth rate and form across the full range of site conditions.
+
+-   Typically, no geographic or environmental limitations within the
+    site series.
+
+-   The species is generally common and abundant in natural forests but
+    may be of variable abundance where disturbance regime/stand age
+    distribution is unfavorable (e.g., shade intolerant species in low
+    disturbance landscapes).
+
+**E2 -- Moderate environmental suitability**: Species occurring outside
+its core environmental tolerance range.
+
+-   The species has variable abundance in natural forests and/or is
+    often concentrated in select site types of the site series (e.g.,
+    warm aspects, higher elevations, elevated micro sites). Patchy or
+    zoned distribution at a landscape and/or stand level are common.
+
+-   Not all site conditions of the site series may be suitable for
+    successful establishment/regeneration. Species success is reduced
+    when established in the open and species is fully exposed to climate
+    conditions (e.g., Cw establishment in open conditions in drier ICH
+    climate is limited by heat and sun exposure).
+
+-   Species may be more susceptible to occasional but expected climatic
+    extremes leading to reduced growth, possible damaged form, or
+    mortality (e.g. drought periods, snowpress, extreme temperatures,
+    flooding).
+
+-   The species may have good growth and survival where successfully
+    established on suitable landscape positions or microsites. However,
+    E2 rating may be used to reflect site series with broadly unsuitable
+    site conditions across species (e.g., frost prone locations, or
+    overly wet Spruce-horsetail site series).
+
+-   May express slow growth rates or poor form across all site series
+    conditions (e.g., site series within woodland subzones or xeric
+    sites).
+
+-   Geographic, topographic, or other environmental limitations are
+    common.
+
+**E3 -- Low environmental suitability**: Species occurring near the
+limits of its climatic or site tolerance.
+
+-   Species is likely to be adjacent to climates or site conditions that
+    do not support its growth and survival. The species is generally
+    infrequent in natural forests and/or has significant environmental
+    limitations in the site series.
+
+-   Only specific landscape positions or microsites in a site series are
+    likely to have establishment/regeneration success, but subsequent
+    good growth is possible when these conditions are met.
+
+-   The species may require canopy cover for establishment and growth.
+    Sites that are fully exposed and open to ambient climate are
+    unsuitable.
+
+-   E3 can be applied in BGCs with very limited growth potential (e.g.,
+    site series in parkland subzones) or that have harsh site conditions
+    for trees (e.g., very xeric sites with shallow, discontinuous soils).
+
+-   Climatic extremes have a higher probability of causing reduced
+    growth, damage, or mortality (e.g., drought periods, snow damage, and
+    extreme temperatures).
+
+-   Species express very low growth rates across all conditions (e.g.,
+    site series in parkland subzones or treed rock outcrops).
+
+-   Multiple limiting environmental factors are common. Limited
+    viability of the site series for forestry may support an E3 rating
+    for all species in that site series.
+
+**E4 -- Minimal environmental suitability**: Species at the very limit
+of its climatic or site tolerance. 
+(*NOT CURRENTLY INCORPORATED INTO CCISS PROJECTIONS*)
+
+-   Species may occur sporadically but typically not forming any
+    component of the forest canopy.
+
+-   Scattered occurrence of individuals in natural stands but not
+    reaching main canopy (e.g., Hw in the western SBSmc2).
+
+-   Species may have persistent cover but low survival and poor growth.
+
+-   Species assigned an E4 rating are not commercially viable due to
+    poor survival and growth.
+
+**E5 -- Not Suitable**: Species is outside of its environmental
+tolerance range.
+
+-   Environmental constraints preclude successful establishment, and
+    species is not present in natural forests.
+
+    -   E5 has been manually assigned only if the species was previously
+        ranked as suitable for a site series in the CFRG and is
+        reassessed as unsuitable. E5 rating is assumed where a species
+        has no rating (i.e., is absent) for a given site series in the
+        suitability tables.
+
+More information on the development of the expert Environmental
+Suitability ratings and the complete dataset of historic suitability
+ratings for BC and Western North America can be found on the BC Data
+Catalogue <a href="https://catalogue.data.gov.bc.ca/dataset/1810fdca-8762-4d6a-8886-4e8cefbdb640" target="_blank">BCDC</a>.
+
+## BEC 13
+
+This version of CCISS uses BEC13, which includes the biogeoclimatic
+classification published in LMH77.
+
+### LMH77 Updates
+
+LMH77 replaces the previously published site identification field guide
+for the Vancouver Forest Region (Green and Klinka 1994) and portions of
+the guide for the Prince Rupert Forest Region (Banner et al. 1993). The
+classification presented here differs from previous classifications in
+several ways: 
+
+-   the reclassification of the Coastal Western Hemlock Very Dry
+    Maritime (CWHxm) to the Dry Maritime CWH (CWHdm); the Central
+    variant (CWHdm1) and the Western variant (CWHdm2) replace the CWHxm1
+    and CWHxm2, respectively, and the Eastern variant (CWHdm3) replaces
+    the lower mainland portion of the old CWHdm;  
+
+<!-- -->
+
+-   the retirement of the CWH Southern Moist Submaritime variant
+    (CWHms1), now reclassified and split into three new variants: the
+    southern CWH Moist Submaritime Submontane (CWHms3), Montane
+    (CWHms4), and Subcontinental (CWHms5);  
+
+<!-- -->
+
+-   the retirement of the CWH Central Moist Submaritime variant
+    (CWHms2), now reclassified to the Central Wet Submaritime CWH
+    variant (CWHws3); 
+
+<!-- -->
+
+-   the reclassification of the Interior Douglas-fir Wet Warm (IDFww),
+    now split into two biogeoclimatic units: the IDFww in the south
+    coast and the ICHun in the central coast; 
+
+<!-- -->
+
+-   a new south coast subzone of the CWH zone is described, the Very Dry
+    Submaritime (CWHxs) replacing portions of the previous distribution
+    of the Interior Douglas-fir Wet Warm (IDFww); 
+
+<!-- -->
+
+-   the previous Submontane variant of the CWH Very Wet Maritime subzone
+    (CWHvm1) is now split into a Southern Submontane variant (CWHvm1)
+    and a Northern Submontane variant (CWHvm3);  
+
+<!-- -->
+
+-   the previous Montane variant of the CWH Very Wet Maritime subzone
+    (CWHvm2) is now split into a Southern Montane variant (CWHvm2) and a
+    Northern Montane variant (CWHvm4); 
+
+<!-- -->
+
+-   a new central/north coast subzone of the Mountain Hemlock zone is
+    described, the MH Very Wet Hypermaritime (MHvh) replacing the
+    previous distribution of the mainland MHwh; 
+
+<!-- -->
+
+-   a new northern subzone of the MH zone is described, the Moist
+    Submaritime MH (MHms) replacing a portion of the previous
+    distribution of Moist Maritime Leeward MH variant (MHmm2); 
+
+<!-- -->
+
+-   the mapping of biogeoclimatic units has been revised: reduction of
+    the IDFww resulting in increased areas of CWHds and creation of the
+    ICHun and CWHxs; reduction of the CWHdm (now the CWHdm3) resulting
+    in increased area and mainland distribution of the CWHdm2; CWHvm1
+    and CWHvm2 north-south split; northern CWHvh1 distribution reduced
+    southward resulting in increased area and Vancouver Island
+    distribution of the CWHvh2; MHvh replacing MHwh; and numerous other
+    minor boundary and elevational shifts 
+
+Reference: LMH77 Chapter 1
+
+### Crosswalk Tables for BGC subzone-variants
+
+Table 1. Crosswalk tables of names of coast classification units used in BEC13
+(LMH77) and in BEC12 (previous guides LMH26 Banner et al. 1993; LMH28
+Green and Klinka 1994) are provided in table below. 
+
+|            |                                                             |
+|------------|-------------------------------------------------------------|
+| **BEC13**  | **BEC12**                                                   |
+| CDFmm      | CDFmm                                                       |
+| CMAun      | CMAun, CMAunp in part (alpine split from parkland)          |
+| CWHdm1     | CWHxm1                                                      |
+| CWHdm2     | CWHxm2                                                      |
+| CWHdm3     | CWHdm                                                       |
+| CWHds1     | CWHds1                                                      |
+| CWHds2     | CWHds2                                                      |
+| CWHmm1     | CWHmm1                                                      |
+| CWHmm2     | CWHmm2                                                      |
+| CWHms3     | CWHms1 in part                                              |
+| CWHms4     | CWHms1 in part                                              |
+| CWHms5     | CWHms1 in part                                              |
+| CWHvh1     | CWHvh1                                                      |
+| CWHvh2     | CWHvh2                                                      |
+| CWHvm1     | CWHvm1                                                      |
+| CWHvm2     | CWHvm2                                                      |
+| CWHvm3     | CWHvm1                                                      |
+| CWHvm4     | CWHvm2                                                      |
+| CWHwm      | CWHwm                                                       |
+| CWHws1     | CWHws1                                                      |
+| CWHws2     | CWHws2                                                      |
+| CWHws3     | CWHms2                                                      |
+| CWHxs      | IDFww                                                       |
+| ICHun      | IDFww - central coast                                       |
+| IDFww      | IDFww, IDFww1 – south coast-interior transition             |
+| ESSFun     | central coast portion of ESSFmw                             |
+| MHmm1      | MHmm1                                                       |
+| MHmm2      | MHmm2                                                       |
+| MHmmp      | MHmmp, CMAunp in part (parkland split from alpine)          |
+| MHms       | Portions of MHmm2 in part, ESSFwv in part, ESSFun in part   |
+| MHmsp      | Portions of MHmmp in part, ESSFwv in part, ESSFunp in part  |
+| MHun       | MHun, portions of MHmm2 north of Stewart                    |
+| MHunp      | MHunp, MHmmp north of Stewart                               |
+| MHvh       | MHwh1 mainland                                              |
+| MHvhp      | MHwhp, CMAunp in part (parkland split from alpine)          |
+
+
+
+#### References: 
+Banner, A., W. H. MacKenzie, S. Haeussler, and S. Thomson. 1993. A field guide to site identification and interpretation for the Prince Rupert Forest Region. Land Management Handbook No. 26. Ministry of Forests, Research Branch, Victoria, B.C.   
+
+Green, R.N., and K. Klinka. 1994. A field guide for site identification and interpretation for the Vancouver Forest Region. Land Management Handbook No. 28. Ministry of Forests, Research Branch, Victoria, B.C.
+
+
