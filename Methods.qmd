@@ -197,8 +197,8 @@ America
 The complete dataset of Western North America biogeoclimatic
 subzone/variants, associated site series information, and edatopic space
 can be found on the BC Data Catalogue.
-`<a href="`{=html}<https://catalogue.data.gov.bc.ca/dataset/cciss-western-north-america-bec-tables>"` target="_blank">`{=html}CCISS
-Western North America BEC Tables</a>
+<a href="https://catalogue.data.gov.bc.ca/dataset/cciss-western-north-america-bec-tables" target="_blank">CCISS Western North America BEC Tables</a>{=html}
+
 
 ### References
 
