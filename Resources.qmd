@@ -2,9 +2,10 @@
 
 ## CCISS Technical Reports:
 
--   Collins, C. G., MacKenzie, W. H., Comeau, V. M., and Daust, K. 2025. [Ratings of Tree Species Environmental Suitability.](downloads/TR_Species_Suitability.pdf) Version 1.0. 
--   C. Mahony, Obrist, D., MacKenzie, W., and Daust, K. 2025. [Biogeoclimatic Projections for British Columbia.](downloads/TR_BGC_Projections.pdf) Version 1.0. 
--   Comeau, V. M., and Collins, C. G. 2025. [Climate Change Informed Species Selection (CCISS) Expert Review.](downloads/TR_CCISS_Expert_Review.pdf) 
+-   Collins, C. G., MacKenzie, W. H., Comeau, V. M., and Daust, K. 2025. [Ratings of Tree Species Environmental Suitability.](downloads/TR_Species_Suitability.pdf) Version 1.0.
+-   C. Mahony, Obrist, D., MacKenzie, W., and Daust, K. 2025. [Biogeoclimatic Projections for British Columbia.](downloads/TR_BGC_Projections.pdf) Version 1.0.
+-   Comeau, V. M., and Collins, C. G. 2025. [Climate Change Informed Species Selection (CCISS) Expert Review.](downloads/TR_CCISS_Expert_Review.pdf)
+-   Meidinger, D., and MacKenzie, W. H. 2024. [Draft Biogeoclimatic Zones and Subzones of the Western United States](downloads/TR_USA_BGCs.pdf)
 
 ## CCISS Peer-reviewed Articles:
 
@@ -27,3 +28,4 @@
 ## Other
 
 -   <a href="https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/forestry/silviculture/stocking-standards/reference-guide/reference_guide_stocking_standards_20210907.xlsx" target="_blank">Chief Forester's Reference Guide for Stocking Standards</a>
+-   [Video of Lead CCISSer W.H. MacKenzie Explaining the CCISS Approach](https://www.youtube.com/watch?v=xOLwA7OEqy8)
