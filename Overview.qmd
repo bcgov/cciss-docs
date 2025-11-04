@@ -1,6 +1,6 @@
 # Overview
 
-Climate Change Informed Species Selection (CCISS – pronounced ‘kiss’) is a Biogeoclimatic Ecosystem Classification-based analysis framework built to anticipate the climate change implications to tree species environmental suitability at a site specific level. The CCISS tool is a web-based application that makes this analysis accessible to practitioners to help guide climate change adaptation in reforestation decisions.
+Climate Change Informed Species Selection (CCISS -- pronounced 'kiss') is a Biogeoclimatic Ecosystem Classification-based analysis framework built to anticipate the climate change implications to tree species environmental suitability at a site specific level. The CCISS tool is a web-based application that makes this analysis accessible to practitioners to help guide climate change adaptation in reforestation decisions.
 
 Understanding climate- and site-level species suitability is one of the foundational pieces of information that practitioners require for the creation of silvicultural prescriptions that will lead to successful reforestation over a rotation period. Climate change will affect this goal by progressively altering environmental conditions and therefore the suitability of tree species established on a site over time.
 
@@ -59,18 +59,15 @@ The CCISS tool is organized into seven tabs.
 
 The CCISS team is:
 
--   Will MacKenzie--—Lead Scientist
--   Kiri Daust--—Software development
--   Vanessa Comeau--—Interpretations and engagement
--   Courtney Collins—--Ecological modeling
--   Destany Crane—--Open data standards
+-   Will MacKenzie-----Lead Scientist
+-   Kiri Daust-----Software development
+-   Vanessa Comeau-----Interpretations and engagement
+-   Courtney Collins-----Ecological modeling
+-   Destany Crane-----Open data standards
 -   Deb Obrist---Interpretations
--   Colin Mahony—--Team lead
+-   Colin Mahony-----Team lead
 
-CCISS team alumni: 
--   Vanessa Comeau--—Interpretations and engagement
--   Deb Obrist---Interpretations
--   Ceres Barros--—Scripting workflows
+CCISS team alumni: - Vanessa Comeau-----Interpretations and engagement - Deb Obrist---Interpretations - Ceres Barros-----Scripting workflows
 
 The following BC Ministry of Forests ecologists provided regional environmental suitability ratings for tree species: Allen Banner (ret.), Ray Coupe (ret.), Del Meidinger (ret.), Tom Braumandl (ret.), Bob Green (ret.), Richard Kabzems (ret.), Bruce Rogers (dec.), Heather Klassen, Sari Saunders, Deb MacKillop, Hardy Griesbauer, Mike Ryan, Erica Lilles and Daniel Sklar.
 
@@ -80,7 +77,7 @@ Shirley Mah and Kevin Astridge led early work on climate change informed species
 
 Dr. Tongli Wang (University of British Columbia) and Dr. Andreas Hamann (University of Alberta) pioneered the core methods used in CCISS, namely biogeoclimatic projections and their translation into tree species suitability projection.
 
-Finally, we acknowledge the World Climate Research Program’s Working Group on Coupled Modelling, which is responsible for the Coupled Model Intercomparison Project (CMIP6), and we thank the global climate climate modelling groups for producing and making available their model output.
+Finally, we acknowledge the World Climate Research Program's Working Group on Coupled Modelling, which is responsible for the Coupled Model Intercomparison Project (CMIP6), and we thank the global climate climate modelling groups for producing and making available their model output.
 
 ## References:
 

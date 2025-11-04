@@ -12,6 +12,7 @@ book:
     - Methods.qmd
     - Issues.qmd
     - Decisions.qmd
+    - Definitions.qmd
     - Feedback.qmd
     - FAQs.qmd
     - Resources.qmd
