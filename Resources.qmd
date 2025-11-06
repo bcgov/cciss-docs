@@ -1,17 +1,18 @@
 # Resources
 
-## CCISS Technical Reports:
+
+## CCISS peer-reviewed articles:
+
+-   MacKenzie, W.H. and C.R. Mahony. 2021. [An ecological approach to climate change-informed tree species selection for reforestation.](downloads/MacKenzieMahony2021_CCISS_FEM.pdf) Forest Ecology and Management 481:118705
+
+## CCISS technical reports:
 
 -   Collins, C. G., MacKenzie, W. H., Comeau, V. M., and Daust, K. 2025. [Ratings of Tree Species Environmental Suitability.](downloads/TR_Species_Suitability.pdf) Version 1.0.
 -   C. Mahony, Obrist, D., MacKenzie, W., and Daust, K. 2025. [Biogeoclimatic Projections for British Columbia.](downloads/TR_BGC_Projections.pdf) Version 1.0.
 -   Comeau, V. M., and Collins, C. G. 2025. [Climate Change Informed Species Selection (CCISS) Expert Review.](downloads/TR_CCISS_Expert_Review.pdf)
 -   Meidinger, D., and MacKenzie, W. H. 2024. [Draft Biogeoclimatic Zones and Subzones of the Western United States](downloads/TR_USA_BGCs.pdf)
 
-## CCISS Peer-reviewed Articles:
-
--   MacKenzie, W.H. and C.R. Mahony. 2021. [An ecological approach to climate change-informed tree species selection for reforestation.](downloads/MacKenzieMahony2021_CCISS_FEM.pdf) Forest Ecology and Management 481:118705
-
-## Data
+## CCISS datasets
 
 -   All data in this tool is available under the Open Government Licence - British Columbia (OGL-BC): <https://www2.gov.bc.ca/gov/content/data/policy-standards/data-policies/open-data/open-government-licence-bc>
 
@@ -25,7 +26,28 @@
 
     -   <a href="https://catalogue.data.gov.bc.ca/dataset/cciss-western-north-america-bec-tables" target="_blank">CCISS Western North America BEC Tables</a>
 
-## Other
+## CCISS videos
+
+-   [Video of Lead CCISSer W.H. MacKenzie Explaining the CCISS Approach](https://www.youtube.com/watch?v=xOLwA7OEqy8)
+
+## Stocking Standards
 
 -   <a href="https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/forestry/silviculture/stocking-standards/reference-guide/reference_guide_stocking_standards_20210907.xlsx" target="_blank">Chief Forester's Reference Guide for Stocking Standards</a>
--   [Video of Lead CCISSer W.H. MacKenzie Explaining the CCISS Approach](https://www.youtube.com/watch?v=xOLwA7OEqy8)
+
+## Tree species silvics, natural history, and autecology
+
+- [Tree species silvics and comparisons](https://www2.gov.bc.ca/gov/content/industry/forestry/managing-our-forest-resources/silviculture/tree-species-selection/tool-introduction/tree-species-silvics-and-comparisons)
+
+- [Silvics of North America](https://www.srs.fs.usda.gov/pubs/misc/ag_654/table_of_contents.htm)
+
+- [The Gymnosperm Database](https://www.conifers.org/)
+
+- [Silvics and Partial Cutting Field Cards](https://www.for.gov.bc.ca/hfp/publications/00088/silvic.pdf)
+
+- [The Tree Book](https://www.for.gov.bc.ca/hfd/library/documents/treebook/trees.htm)
+
+## Climate impacts to tree species
+
+- Johnston, M. H., Campagna, M., Gray, P., Kope, H., Loo, J., Ogden, A., O’Neill, G. A., Price, D., & Williamson, T. 2009. [Vulnerability of Canada’s tree species to climate change and management options for adaptation: An overview for policy makers and practitioners.](https://www.ccfm.org/wp-content/uploads/2020/08/Vulnerability-of-Canada%E2%80%99s-tree-species-to-climate-change-and-management-options-for-adaptation-Full-Report.pdf) Canadian Council of Forest Ministers. 
+
+
