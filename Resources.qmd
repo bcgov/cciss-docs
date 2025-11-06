@@ -36,7 +36,7 @@
 
 ## Tree species silvics, natural history, and autecology
 
-- [Tree species silvics and comparisons](https://www2.gov.bc.ca/gov/content/industry/forestry/managing-our-forest-resources/silviculture/tree-species-selection/tool-introduction/tree-species-silvics-and-comparisons)
+- [Tree species silvics compendium](https://www2.gov.bc.ca/gov/content/industry/forestry/managing-our-forest-resources/silviculture/tree-species-selection/tree-species-compendium-index)
 
 - [Silvics of North America](https://www.srs.fs.usda.gov/pubs/misc/ag_654/table_of_contents.htm)
 
