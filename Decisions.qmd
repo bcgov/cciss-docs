@@ -16,13 +16,13 @@ While the development of climate change informed stocking standards is the prima
 
 -   **Reforestation prescriptions**—Practitioners can use the CCISS tool to inform their prescriptions (within the constraints of stocking standards) and export CCISS results as documentation of due diligence.
 -   **Landscape-level species diversification strategies**—The CCISS tool facilitates assessment of species environmental suitability trends at landscape and regional scales, which is a core prerequisite for managing the landscape profile of tree species to minimize climate change vulnerabilities (Mah et al. 2012). To further advance this effort, the CCISS team is developing a quantitative analysis to spread climate change risk across a complementary portfolio of tree species.
--   **Climate change vulnerability assessment**—CCISS environmental suitability ratings are primarily derived from the historical presence of the species in mature natural stands. predicted declines in tree species environmental suitability can therefore indicate risks to mature and old stands. Consequently, CCISS results can be relevant to management of old growth, wildlife habitat, hydrology, carbon sequestration, and other ecosystem services.
+-   **Climate change vulnerability assessment**—CCISS environmental suitability ratings are primarily derived from the historical presence of the species in mature natural stands. Predicted declines in tree species environmental suitability can therefore indicate risks to mature and old stands. Consequently, CCISS results can be relevant to management of old growth, wildlife habitat, hydrology, carbon sequestration, and other ecosystem services.
 
 ### Policy neutrality of CCISS projections
 
 The CCISS tool is policy-neutral: CCISS projections are not management recommendations. CCISS environmental suitability ratings indicate environmental constraints on establishment and survival, not the relative desirability of species for reforestation. While the E1 (high suitability) rating indicates minimal environmental constraints, the E2 (moderate suitability) rating indicates that specific silvicultural practices are likely required for successful stand development. Examples of these practices are: a shelterwood silviculture system to mitigate drought and/or frost risk; site preparation and/or microsite selection; and reduced stocking densities to mitigate inter-tree soil moisture competition. Where these practices align with management objectives, a species with an E2 rating may be preferred over a species with an E1 rating.
 
-Further, projections of current or future environmental suitability outside the historical range of a tree species do not necessarily indicate that the species should be planted there. CCISS does not promote assisted range expansion of tree species. It simply indicates where and when assisted range expansion could lead to successful establishment and survival
+Further, projections of current or future environmental suitability outside the historical range of a tree species do not necessarily indicate that the species should be planted there. CCISS does not promote assisted range expansion of tree species. It simply indicates where and when assisted range expansion could lead to successful establishment and survival.
 
 ### Relationship to Climate-Based Seed Transfer (CBST)
 
@@ -32,11 +32,11 @@ In theory, there is potential for CCISS and CBST to provide conflicting informat
 
 ## Integrating CCISS results into tree species selection
 
-CCISS is intended as an input to tree species selection decisions, not as a definitive answer. CCISS provides a foundation of BEC-based interpretations that is comprehensive (all species for all site series across BC) but incomplete. Any tree species selection decision needs to account for other information, synthesized through professional judgement, including non-BEC factors, sources of error, and other lines of evidence (Figure 1).
+CCISS is intended as an input to tree species selection decisions, not as a definitive answer. CCISS provides a foundation of BEC-based interpretations that is comprehensive (all species for all site series across BC) but incomplete. Any tree species selection decision needs to account for other information, integrated through professional judgement, including non-BEC factors, sources of error, and other lines of evidence (Figure 1).
 
 <figure>
 
-<img src="Figure_SppSelectionCartoon.png" style="width:70%;"/>
+<img src="Figure_SppSelectionCartoon.png" style="width:80%;"/>
 
 <figcaption style="font-size: 1.0em; color: gray;">
 
